@@ -148,6 +148,8 @@ Dans la commande ci-dessus : l'ordre des différentes options n'a pas d'importan
 La liste complète des options est ici : <https://github.com/hakimel/reveal.js#configuration>. `history=false` évite de peupler l'historique du navigateur avec chaque passage de slide. `transition=none` économise du temps et de l'énergie.
 
 Les thèmes prédéfinis sont globalement assez vilains. Le thème *white* (noir sur fond blanc) fournit une meilleure base pour personnaliser que le thème par défaut. Certains recommandent de tout jeter et repartir de zéro, cf. <https://www.chenhuijing.com/blog/customising-revealjs-beyond-theming/>
+
+Pour indiquer à Pandoc où se trouve Reveal, il faut inclure l'option `revealjs-url` dans la commande. Cette URL peut pointer vers une version en ligne ou bien une copie locale sur votre machine.
 :::
 
 ## Assemblage du système

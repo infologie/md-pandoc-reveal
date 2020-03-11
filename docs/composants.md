@@ -77,6 +77,8 @@ La liste complète des options est ici : <https://github.com/hakimel/reveal.js#
 
 Les thèmes prédéfinis sont globalement assez vilains. Le thème *white* (noir sur fond blanc) fournit une meilleure base pour personnaliser que le thème par défaut. Certains recommandent de tout jeter et repartir de zéro, cf. <https://www.chenhuijing.com/blog/customising-revealjs-beyond-theming/>
 
+Pour indiquer à Pandoc où se trouve Reveal, il faut inclure l'option `revealjs-url` dans la commande. Cette URL peut pointer vers une version en ligne ou bien une copie locale sur votre machine.
+
 ## Assemblage du système
 
 Plutôt qu'exécuter Pandoc manuellement, mieux vaut écrire un script ou utiliser un logiciel. Exemple (macOS) :
