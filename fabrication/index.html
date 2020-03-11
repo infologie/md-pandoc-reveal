@@ -1,0 +1,643 @@
+
+
+
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Un système pour fabriquer des présentations HTML Reveal.js : écriture en Markdown, le langage de balisage léger le plus simple au monde, puis conversion en HTML avec Pandoc, le couteau-suisse du texte brut.">
+      
+      
+      
+        <meta name="author" content="Arthur Perret">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copier dans le presse-papier">
+      
+        <meta name="lang:clipboard.copied" content="Copié dans le presse-papier">
+      
+        <meta name="lang:search.language" content="fr">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="Aucun document trouvé">
+      
+        <meta name="lang:search.result.one" content="1 document trouvé">
+      
+        <meta name="lang:search.result.other" content="# documents trouvés">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>2/ Fabrication d'une présentation - Présentations HTML Reveal avec Markdown et Pandoc</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../css/custom.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="black" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#fabrication-dune-presentation" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Présentations HTML Reveal avec Markdown et Pandoc" aria-label="Présentations HTML Reveal avec Markdown et Pandoc" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">present_to_all</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Présentations HTML Reveal avec Markdown et Pandoc
+            </span>
+            <span class="md-header-nav__topic">
+              
+                2/ Fabrication d'une présentation
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Taper pour démarrer la recherche
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Présentations HTML Reveal avec Markdown et Pandoc" class="md-nav__button md-logo">
+      
+        <i class="md-icon">present_to_all</i>
+      
+    </a>
+    Présentations HTML Reveal avec Markdown et Pandoc
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Accueil" class="md-nav__link">
+      Accueil
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../composants/" title="1/ Composants du système" class="md-nav__link">
+      1/ Composants du système
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        2/ Fabrication d'une présentation
+      </label>
+    
+    <a href="./" title="2/ Fabrication d'une présentation" class="md-nav__link md-nav__link--active">
+      2/ Fabrication d'une présentation
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table des matières</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#premiere-slide" class="md-nav__link">
+    Première slide
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slides" class="md-nav__link">
+    Slides
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contenu" class="md-nav__link">
+    Contenu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attributs-de-slide" class="md-nav__link">
+    Attributs de slide
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spans-et-divs" class="md-nav__link">
+    Spans et divs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edition-multicanal" class="md-nav__link">
+    Édition multicanal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommandations-sur-les-images" class="md-nav__link">
+    Recommandations sur les images
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#juxtaposition-horizontale" class="md-nav__link">
+    Juxtaposition horizontale
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#juxtaposition-verticale" class="md-nav__link">
+    Juxtaposition verticale
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alignement-dimages" class="md-nav__link">
+    Alignement d'images
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#figures" class="md-nav__link">
+    Figures
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plusieurs-figures" class="md-nav__link">
+    Plusieurs figures
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#legende-sur-le-cote" class="md-nav__link">
+    Légende sur le côté
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../credits/" title="Crédits" class="md-nav__link">
+      Crédits
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table des matières</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#premiere-slide" class="md-nav__link">
+    Première slide
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slides" class="md-nav__link">
+    Slides
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contenu" class="md-nav__link">
+    Contenu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attributs-de-slide" class="md-nav__link">
+    Attributs de slide
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spans-et-divs" class="md-nav__link">
+    Spans et divs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edition-multicanal" class="md-nav__link">
+    Édition multicanal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommandations-sur-les-images" class="md-nav__link">
+    Recommandations sur les images
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#juxtaposition-horizontale" class="md-nav__link">
+    Juxtaposition horizontale
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#juxtaposition-verticale" class="md-nav__link">
+    Juxtaposition verticale
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alignement-dimages" class="md-nav__link">
+    Alignement d'images
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#figures" class="md-nav__link">
+    Figures
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plusieurs-figures" class="md-nav__link">
+    Plusieurs figures
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#legende-sur-le-cote" class="md-nav__link">
+    Légende sur le côté
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="fabrication-dune-presentation">Fabrication d'une présentation</h1>
+<h2 id="premiere-slide">Première slide</h2>
+<p>Le bloc de métadonnées en YAML au début du fichier Markdown permet de fournir les éléments de la première slide, qui est créée automatiquement. Il peut aussi contenir des options propres à Pandoc.</p>
+<h2 id="slides">Slides</h2>
+<p>Un titre signale le début d'une nouvelle slide. Un seul niveau de titre dans tout le document crée une présentation linéaire ; utiliser deux niveaux différents crée une présentation en deux dimensions, avec un défilement horizontal et vertical.</p>
+<p>Si on ne met que les croisillons, cela crée un élément titre mais sans contenu textuel, donc une nouvelle slide mais non titrée.</p>
+<p>Pour une présentation à deux niveaux de titre, il faut respecter une règle assez précise. Au niveau de titre le plus élevé des deux, il ne faut mettre que des titres, aucun contenu (texte, image, etc.) : il faut imaginer une règle disant qu'un titre de section doit toujours être suivi directement d'un titre de sous-section.</p>
+<p>Cette disposition se justifie surtout dans deux cas : pour faciliter les aller-retours dans un long diaporama ; pour produire une version à distribuer (PDF, docx…) un peu structurée.</p>
+<p>À noter que le public peut ignorer totalement que la présentation est sur deux niveaux si les effets de transition et les boutons sont masqués, et que l'orateur ne bascule jamais l'affichage en mode <em>overview</em> (touche O).</p>
+<h2 id="contenu">Contenu</h2>
+<p>Toute la syntaxe Markdown est utilisable. On peut également inclure du HTML pour certains éléments rares mais utiles (<em>iframe</em>, <em>kbd</em>, etc.).</p>
+<h2 id="attributs-de-slide">Attributs de slide</h2>
+<p><code># Titre {data-background-color="#000000"}</code></p>
+<p>Ils viennent modifier le fond d'une slide en y affichant une couleur, image, vidéo ou <em>iframe</em> indiquée entre accolades.</p>
+<p>L'<em>iframe</em> en fond est particulièrement intéressante pour montrer des ressources web en tirant parti de la totalité de l'écran (voir slide suivante).</p>
+<p>Les couleurs peuvent être identifiées par un nom dans le cas des couleurs nommées (ex : blue, red) et par leurs différents codes dans tous les cas (hexadécimal, rgb, rgba…). Les autres ressources sont incluses via leur URL (local ou distant).</p>
+<p>Lorsqu'on inclut une <em>iframe</em> qui prend toute la taille de l'écran avec <code>data-background-iframe</code>, il peut être une bonne idée de laisser les contrôles Reveal apparents avec l'option <code>-V controls=true</code> de Pandoc. En effet, interagir avec le contenu de l'iframe déplace le cadre de l'interaction : les touches du clavier ne déclenchent alors plus les fonctions de Reveal, comme le défilement des slides. Laisser les boutons visibles permet de passer à la slide suivante et de reprendre le cours normal de la présentation.</p>
+<h2 id="spans-et-divs"><em>Spans</em> et <em>divs</em></h2>
+<p>Pandoc propose une syntaxe raccourcie pour appliquer des attributs (classes et identifiants CSS) à certains éléments ou groupe d'éléments. Ceci crée des <em>spans</em> et des <em>divs</em> en HTML.</p>
+<p><code>[texte]{attribut}</code><br />
+<code>![légende](image.jpg){attribut}</code></p>
+<pre><code>::: {.attribut}
+Contenu (texte, image, etc.)
+</code></pre>
+
+<p>Exemple : [css]{.smallcaps} est en petites capitales car Pandoc rajoute la déclaration suivante pendant la conversion :</p>
+<pre><code class="css">.smallcaps { font-variant: small-caps; }
+</code></pre>
+
+<p>Partant de ce principe, on peut introduire ses propres règles de mise en forme ou réutiliser un jeu de règles existantes.</p>
+<p>Par exemple, la CSS appliquée à cette présentation ajoute une bordure et une ombre aux images, ainsi qu'une classe <em>borderless</em> à appliquer manuellement aux exceptions. On pourrait très bien faire l'inverse.</p>
+<p>C'est le principe des macros dans les traitements de texte ou dans LaTeX.</p>
+<h2 id="edition-multicanal">Édition multicanal</h2>
+<p><img alt="" src="../img/multicanal.png" /></p>
+<p>Dans Reveal, le contenu du <em>div</em> notes ne s'affiche que dans le mode présentateur. Mais si on convertit le fichier source en Markdown dans un autre format, ce dernier affichera les notes sans aucun traitement spécifique, car un <em>div</em> n'a de sens qu'en HTML et CSS – Pandoc ne le prend en compte que lorsqu'on fabrique une présentation Reveal. En s'appuyant sur ce constat, on peut utiliser une autre commande Pandoc sur le même fichier pour créer un document distribuable (<em>handout</em>) reprenant tout le contenu (en PDF, docx, etc.).</p>
+<p>Grâce aux attributs rajoutés à Markdown par Pandoc, on peut même aller un cran plus loin. CSS permet d'afficher ou masquer des éléments grâce à la propriété <code>display</code>, ce qui signifie qu'on peut rédiger le fichier source de manière à masquer une partie du contenu côté présentation (blocs entiers via <em>divs</em> et fragments intra-blocs via <em>spans</em>) et générer d'autre part un PDF qui affiche tout.</p>
+<p>Il faut que le contenu s'y prête et cela nécessite de la gymnastique. Dans une certaine mesure, il s'agit d'emprunter une certaine conception lettrée de la programmation (<em>literate programming</em>, Donald Knuth) et de l'appliquer à Pandoc : ce dernier étant capable de tisser (<em>weave</em>) différents documents à partir d'un même fichier, on peut jouer sur les différences entre formats pour mettre en œuvre un processus d'édition multicanal.</p>
+<h2 id="recommandations-sur-les-images">Recommandations sur les images</h2>
+<p><img alt="" src="../img/paysage.005.png" /></p>
+<p>Résolution élevée, grande taille et zoom <kbd>Alt</kbd>+<kbd>clic</kbd></p>
+<p>Un bon début consiste à définir les dimensions maximales d'affichage des images proportionnellement à la taille de l'écran. C'est plus facile à dire qu'à faire. Il faut par exemple considérer qu'une image dans une figure devrait être moins grande qu'une image standard, pour accommoder la légende positionnée dessous.</p>
+<h2 id="juxtaposition-horizontale">Juxtaposition horizontale</h2>
+<p><img alt="" src="../img/paysage.002.png" /></p>
+<p><img alt="" src="../img/paysage.004.png" /></p>
+<p>La comparaison est un bon outil analytique. Il est facile de juxtaposer des images si elles sont au format paysage et de ratio équivalent : on les inclut normalement, séparées par deux retours à la ligne.</p>
+<p>Par défaut, Reveal ne propose pas de solution pour afficher du contenu qui dépasserait la hauteur de la slide. Quelques lignes de CSS suffisent toutefois à créer une classe qui vient ajouter du défilement en cas de besoin (ici la classe <em>long</em>).</p>
+<h2 id="juxtaposition-verticale">Juxtaposition verticale</h2>
+<p><img alt="" src="../img/portrait.001.png" />
+<img alt="" src="../img/portrait.003.png" /></p>
+<p>Pour juxtaposer deux images au format portrait, il faut juste les séparer par un retour à la ligne. En Markdown, il faut deux retours à la ligne pour séparer deux paragraphes. En séparant des images par un seul retour à la ligne, elles appartiennent au même paragraphe et sont donc positionnées sur une même ligne.</p>
+<p>Assembler deux images et afficher le résultat en image de fond constitue une bonne option pour occuper exactement l'espace maximum disponible, si on n'a pas besoin de légende et si on maîtrise la résolution d'affichage.</p>
+<h2 id="alignement-dimages">Alignement d'images</h2>
+<p><img alt="" src="../img/carre.001.png" />
+<img alt="" src="../img/carre.002.png" />
+<img alt="" src="../img/carre.003.png" />
+<img alt="" src="../img/carre.004.png" />
+<img alt="" src="../img/carre.005.png" />
+<img alt="" src="../img/carre.006.png" /></p>
+<p>Un retour à la ligne automatique (<em>wrap</em>) intervient lorsque les images mises bout à bout excèdent la largeur de l'écran.</p>
+<h2 id="figures">Figures</h2>
+<p><img alt="Légende" src="../img/portrait.003.png" /></p>
+<p>Pandoc traite les images contenant du texte alternatif comme une figure avec image et légende.</p>
+<h2 id="plusieurs-figures">Plusieurs figures</h2>
+<p><img alt="Légende" src="../img/carre.002.png" /></p>
+<p><img alt="Légende" src="../img/carre.004.png" /></p>
+<p><img alt="Légende" src="../img/carre.006.png" /></p>
+<p>Contrairement aux images simples, Pandoc traite les figures comme des blocs. <a href="https://pandoc.org/MANUAL.html#extension-implicit_figures">https://pandoc.org/MANUAL.html#extension-implicit_figures</a></p>
+<p>Pour juxtaposer plusieurs figures en ligne, il faut reproduire la situation des images contenues dans un paragraphe, en enveloppant les figures avec un élément <em>div</em> sur lequel on applique une classe CSS contenant les déclarations utiles : retour automatique, espacement, alignement, etc. Les détails sont une question de choix mais le standard Flexbox offre a priori exactement les outils souhaités.</p>
+<h2 id="legende-sur-le-cote">Légende sur le côté</h2>
+<p><img alt="Une figure contient une image *(img)* et une légende *(figcaption)* positionnée dessous. Pour tirer le meilleur parti des contraintes spatiales de l'écran, on peut vouloir modifier leur disposition, par exemple en mettant la légende sur le côté quand l'image s'y prête." src="../img/paysage.001.png" /></p>
+<p><img alt="Art génératif via Processing, Étienne Jacob, 2018" src="../img/EtienneJacob2018.webp" /></p>
+<p>On peut combiner les attributs de section à des attributs d'élément, ici sur une image, pour des effets visuels particulièrement prononcés. <a href="https://pandoc.org/MANUAL.html#extension-link_attributes">https://pandoc.org/MANUAL.html#extension-link_attributes</a></p>
+<p>Source : <a href="https://necessary-disorder.tumblr.com/post/180757120663">https://necessary-disorder.tumblr.com/post/180757120663</a></p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../composants/" title="1/ Composants du système" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Précédent
+                </span>
+                1/ Composants du système
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../credits/" title="Crédits" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Suivant
+                </span>
+                Crédits
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            © Arthur Perret 2020 CC BY
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
+      
+        
+        
+          
+          <script src="../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+                <script src="../assets/javascripts/lunr/lunr.fr.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

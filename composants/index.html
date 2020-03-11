@@ -1,0 +1,541 @@
+
+
+
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Un système pour fabriquer des présentations HTML Reveal.js : écriture en Markdown, le langage de balisage léger le plus simple au monde, puis conversion en HTML avec Pandoc, le couteau-suisse du texte brut.">
+      
+      
+      
+        <meta name="author" content="Arthur Perret">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copier dans le presse-papier">
+      
+        <meta name="lang:clipboard.copied" content="Copié dans le presse-papier">
+      
+        <meta name="lang:search.language" content="fr">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="Aucun document trouvé">
+      
+        <meta name="lang:search.result.one" content="1 document trouvé">
+      
+        <meta name="lang:search.result.other" content="# documents trouvés">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>1/ Composants du système - Présentations HTML Reveal avec Markdown et Pandoc</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../css/custom.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="black" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#composants-du-systeme" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Présentations HTML Reveal avec Markdown et Pandoc" aria-label="Présentations HTML Reveal avec Markdown et Pandoc" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">present_to_all</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Présentations HTML Reveal avec Markdown et Pandoc
+            </span>
+            <span class="md-header-nav__topic">
+              
+                1/ Composants du système
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Taper pour démarrer la recherche
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Présentations HTML Reveal avec Markdown et Pandoc" class="md-nav__button md-logo">
+      
+        <i class="md-icon">present_to_all</i>
+      
+    </a>
+    Présentations HTML Reveal avec Markdown et Pandoc
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Accueil" class="md-nav__link">
+      Accueil
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        1/ Composants du système
+      </label>
+    
+    <a href="./" title="1/ Composants du système" class="md-nav__link md-nav__link--active">
+      1/ Composants du système
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table des matières</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#markdown" class="md-nav__link">
+    Markdown
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css" class="md-nav__link">
+    CSS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reveal" class="md-nav__link">
+    Reveal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pandoc" class="md-nav__link">
+    Pandoc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ajouts-de-pandoc-a-markdown" class="md-nav__link">
+    Ajouts de Pandoc à Markdown
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parametrage-de-reveal-via-pandoc" class="md-nav__link">
+    Paramétrage de Reveal via Pandoc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assemblage-du-systeme" class="md-nav__link">
+    Assemblage du système
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../fabrication/" title="2/ Fabrication d'une présentation" class="md-nav__link">
+      2/ Fabrication d'une présentation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../credits/" title="Crédits" class="md-nav__link">
+      Crédits
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table des matières</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#markdown" class="md-nav__link">
+    Markdown
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css" class="md-nav__link">
+    CSS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reveal" class="md-nav__link">
+    Reveal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pandoc" class="md-nav__link">
+    Pandoc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ajouts-de-pandoc-a-markdown" class="md-nav__link">
+    Ajouts de Pandoc à Markdown
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parametrage-de-reveal-via-pandoc" class="md-nav__link">
+    Paramétrage de Reveal via Pandoc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assemblage-du-systeme" class="md-nav__link">
+    Assemblage du système
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="composants-du-systeme">Composants du système</h1>
+<h2 id="markdown">Markdown</h2>
+<p>Markdown est un langage de balisage léger, inventé pour écrire plus facilement en HTML. Volontairement basique, sa syntaxe contient :</p>
+<ul>
+<li>des éléments en ligne comme <em>emphase simple</em>, <strong>emphase forte</strong>, <a href="https://artorig.github.io/tutomd/">lien</a>, <code>code</code> ;</li>
+<li>des éléments en bloc comme liste, citation, code, etc.</li>
+</ul>
+<p>Il existe de multiples variantes qui étendent Markdown dans différentes directions, ainsi qu'une spécification de la syntaxe de base : <a href="https://commonmark.org/">CommonMark</a>. J'ai traduit le tutoriel Markdown de CommonMark, à cette adresse : <a href="https://artorig.github.io/tutomd/">https://artorig.github.io/tutomd/</a>.</p>
+<h2 id="css">CSS</h2>
+<p>CSS est le langage de mise en forme du web. C'est un outil simple mais puissant. Son principal défaut est indirect : les navigateurs n'appliquent pas toujours toutes les fonctionnalités CSS, ni de manière identique.</p>
+<p>Il faut absolument lire et intégrer <a href="https://developer.mozilla.org/fr/docs/Apprendre/CSS/Building_blocks/Cascade_et_heritage">les principes de cascade et d'héritage</a> pour comprendre comment ça marche et résoudre d'éventuels problèmes.</p>
+<p>Reveal fait coexister plusieurs feuilles de style (CSS de base, thème prédéfini) auxquelles on rajoute souvent sa propre CSS. Comprendre laquelle s'applique où et pourquoi est indispensable en cas de problème.</p>
+<p>Le rendu varie en fonction du navigateur. Je recommande Firefox.</p>
+<h2 id="reveal">Reveal</h2>
+<p>Reveal est une collection de fichiers CSS et Javascript qui permettent de représenter un fichier HTML sous forme de présentation interactive.</p>
+<p>Ceci permet de combiner les fonctionnalités classiques des logiciels de présentation (transitions, affichage avec notes…) avec celles du web.</p>
+<p>Le code de Reveal est <em>open source</em> : <a href="https://github.com/hakimel/reveal.js/">https://github.com/hakimel/reveal.js/</a></p>
+<p>Le <em>div</em> notes est spécial : c'est un <em>div</em> prédéfini, qui ne se note pas avec des accolades, et qui permet de produire des notes d'intervenant pour le mode présentation de Reveal. Son contenu peut être formaté en Pandoc Markdown. C'est une <em>pop-up</em> qu'on peut faire apparaître via la touche S du clavier, sous réserve d'autoriser dans son navigateur les <em>pop-ups</em> en provenance du fichier de présentation.</p>
+<p>Un argument phare de la présentation en HTML est la <strong>transclusion</strong> : on peut y inclure presque n'importe quel contenu web via un cadre interactif (<em>iframe</em>).</p>
+<iframe src="https://fr.wikipedia.org/wiki/Transclusion" width="100%" height="300px"><https://fr.wikipedia.org/wiki/Transclusion></iframe>
+
+<p>Un site peut être configuré pour qu'il ne soit pas possible de l'inclure dans des <em>iframes</em>. Ce n'est pas courant mais cela existe.</p>
+<p>Notez la classe <em>stretch</em> appliquée à l'<em>iframe</em>. Elle est définie dans la CSS de Reveal et étire l'élément pour qu'il occupe la hauteur et la largeur disponible relativement au reste de la slide. On peut aussi l'appliquer aux images en tirant parti d'une syntaxe plus légère grâce à Pandoc (voir plus loin).</p>
+<h2 id="pandoc">Pandoc</h2>
+<p>Pandoc est un logiciel de conversion entre langages de balisage. On l'utilise ici pour transformer du Markdown en présentation HTML Reveal.</p>
+<p>Pandoc permet de pousser très loin le compromis entre simplicité et fonctionnalité inhérent à Markdown grâce à des extensions de la syntaxe de base, ainsi que des options de paramétrage de Reveal.</p>
+<h2 id="ajouts-de-pandoc-a-markdown">Ajouts de Pandoc à Markdown</h2>
+<p>Des <strong>modifications</strong> ou <strong>extensions</strong> des éléments existants.</p>
+<p>Des <strong>éléments nouveaux</strong> : maths, notes de bas de page, références bibliographiques, liste de définitions…</p>
+<p>De la <strong>mise en forme</strong> : coloration syntaxique du code mais surtout une syntaxe raccourcie pour les <em>div</em> et <em>span</em> qui permet d'introduire de la mise en forme facilement.</p>
+<p>Les spécificités du Pandoc Markdown introduisent de la dette technique. Mais elles répondent utilement à des besoins importants sans trop retrancher aux avantages du langage de base. Et l'auteur de Pandoc est au centre de l'initiative CommonMark.</p>
+<p>Un exemple d'ajout, l'intégration d'une gestion automatisée des références bibliographiques :</p>
+<blockquote>
+<p>« PowerPoint offre une vision simplifiée et fragmentée pour être accessible et reproductible ; il donne l'illusion de produire du spectaculaire pour séduire ; il est minimaliste pour esquiver la critique. » [@frommer2010, 252]</p>
+</blockquote>
+<p>Pandoc place la liste des références citées dans un <em>div</em> avec l'identifiant <em>refs</em>. Si l'auteur ne le positionne pas lui-même, Pandoc l'ajoute automatiquement à la fin du document. Dans cette présentation par exemple, le <em>div</em> a été mis au début.</p>
+<h2 id="parametrage-de-reveal-via-pandoc">Paramétrage de Reveal via Pandoc</h2>
+<p>Dans le fichier : notes d'intervenant, attributs de slide.</p>
+<p>À la conversion : numérotation des slides, visibilité des boutons, type de transition, thème graphique, etc.</p>
+<pre><code>pandoc -f markdown in.md -o out.html -t revealjs -s -c prez.css
+--filter=pandoc-citeproc --bibliography biblio.bib --csl apa-fr.csl
+-V theme=white -V history=false -V transition=none
+</code></pre>
+
+<p>Dans la commande ci-dessus : l'ordre des différentes options n'a pas d'importance et la séparation en lignes distinctes est faite uniquement par commodité visuelle. Première ligne : fichiers en entrée et en sortie. Deuxième ligne : concerne les références bibliographiques, s'il y en a. Troisième ligne : options de Reveal.</p>
+<p>La liste complète des options est ici : <a href="https://github.com/hakimel/reveal.js#configuration">https://github.com/hakimel/reveal.js#configuration</a>. <code>history=false</code> évite de peupler l'historique du navigateur avec chaque passage de slide. <code>transition=none</code> économise du temps et de l'énergie.</p>
+<p>Les thèmes prédéfinis sont globalement assez vilains. Le thème <em>white</em> (noir sur fond blanc) fournit une meilleure base pour personnaliser que le thème par défaut. Certains recommandent de tout jeter et repartir de zéro, cf. <a href="https://www.chenhuijing.com/blog/customising-revealjs-beyond-theming/">https://www.chenhuijing.com/blog/customising-revealjs-beyond-theming/</a></p>
+<h2 id="assemblage-du-systeme">Assemblage du système</h2>
+<p>Plutôt qu'exécuter Pandoc manuellement, mieux vaut écrire un script ou utiliser un logiciel. Exemple (macOS) :</p>
+<ul>
+<li>outils système (Automator, AppleScript) ;</li>
+<li>éditeur de texte généraliste scriptable (ex : BBEdit) ;</li>
+<li>éditeur spécialisé bâti autour de Pandoc (ex : Zettlr).</li>
+</ul>
+<p>Un script pour BBEdit est fourni avec ce fichier à titre d'exemple.</p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href=".." title="Accueil" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Précédent
+                </span>
+                Accueil
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../fabrication/" title="2/ Fabrication d'une présentation" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Suivant
+                </span>
+                2/ Fabrication d'une présentation
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            © Arthur Perret 2020 CC BY
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
+      
+        
+        
+          
+          <script src="../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+                <script src="../assets/javascripts/lunr/lunr.fr.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

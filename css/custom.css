@@ -1,0 +1,14 @@
+body {
+	font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.md-typeset h1 {
+	font-weight: 900;
+	color: rgba(0,0,0,1);
+}
+.md-header-nav__title,
+.md-typeset h2 {
+	font-weight: 700;
+}
+code, kbd, pre {
+	font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+}
