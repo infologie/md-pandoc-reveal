@@ -1,8 +1,8 @@
 # Présentations HTML Reveal avec Markdown et Pandoc
 
-Un tutoriel pour fabriquer des présentations HTML [Reveal.js](https://github.com/hakimel/reveal.js/) : écriture en Markdown, le langage de balisage léger le plus simple au monde, puis conversion en HTML avec [Pandoc](https://github.com/jgm/pandoc/), le couteau-suisse du texte brut.
+Un tutoriel pour fabriquer des présentations HTML [Reveal.js](https://github.com/hakimel/reveal.js/) : écriture en Markdown, un langage de balisage léger très simple, puis conversion en HTML avec [Pandoc](https://github.com/jgm/pandoc/), le couteau-suisse du texte brut.
 
-Le fichier `prez.md` est auto-démonstratif : il explique l'intérêt du système, ses composants et les bases de la fabrication, et peut être lui-même utilisé pour fabriquer une présentation. La version web de ce tutoriel est disponible à l'adresse : 
+Le fichier `prez.md` est auto-démonstratif : il explique l'intérêt du système, ses composants et les bases de la fabrication, et peut être lui-même utilisé pour fabriquer une présentation. La version web de ce tutoriel est disponible à l'adresse : <https://infologie.github.io/md-pandoc-reveal/>
 
 ## Description des fichiers
 

@@ -57,7 +57,7 @@ Un exemple d'ajout, l'intégration d'une gestion automatisée des références b
 
 > « PowerPoint offre une vision simplifiée et fragmentée pour être accessible et reproductible ; il donne l'illusion de produire du spectaculaire pour séduire ; il est minimaliste pour esquiver la critique. » [@frommer2010, 252]
 
-Pandoc place la liste des références citées dans un *div* avec l'identifiant *refs*. Si l'auteur ne le positionne pas lui-même, Pandoc l'ajoute automatiquement à la fin du document. Dans cette présentation par exemple, le *div* a été mis au début.
+Pandoc place la liste des références citées dans un *div* avec l'identifiant *refs*. Si l'auteur ne le positionne pas lui-même, Pandoc l'ajoute automatiquement à la fin du document.
 
 ## Paramétrage de Reveal via Pandoc
 
@@ -85,4 +85,4 @@ Plutôt qu'exécuter Pandoc manuellement, mieux vaut écrire un script ou utilis
 - éditeur de texte généraliste scriptable (ex : BBEdit) ;
 - éditeur spécialisé bâti autour de Pandoc (ex : Zettlr).
 
-Un script pour BBEdit est fourni avec ce fichier à titre d'exemple.
+Un script Shell ainsi qu'un script pour BBEdit sont inclus dans le dépôt à titre d'exemple.

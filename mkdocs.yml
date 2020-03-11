@@ -1,11 +1,16 @@
 site_name: Présentations HTML Reveal avec Markdown et Pandoc
+site_url: 'https://infologie.github.io/md-pandoc-reveal/'
+repo_name: 'infologie/md-pandoc-reveal'
+repo_url: 'https://github.com/infologie/md-pandoc-reveal'
+edit_uri: ''
 site_author: Arthur Perret
-site_description: 'Un système pour fabriquer des présentations HTML Reveal.js : écriture en Markdown, le langage de balisage léger le plus simple au monde, puis conversion en HTML avec Pandoc, le couteau-suisse du texte brut.'
+site_description: 'Tutoriel pour fabriquer des présentations HTML Reveal.js : écriture en Markdown, un langage de balisage léger très simple, puis conversion en HTML avec Pandoc, le couteau-suisse du texte brut.'
 copyright: '© Arthur Perret 2020 CC BY'
 nav:
     - Accueil: index.md
-    - 1/ Composants du système: composants.md
-    - 2/ Fabrication d'une présentation: fabrication.md
+    - 1/ Pourquoi ce système ?: introduction.md
+    - 2/ Composants du système: composants.md
+    - 3/ Fabrication d'une présentation: fabrication.md
     - Crédits: credits.md
 theme:
     name: 'material'
@@ -19,5 +24,9 @@ theme:
     logo:
         icon: 'present_to_all'
     favicon: 'img/favicon.ico'
+extra:
+  social:
+    - type: 'twitter'
+      link: 'https://twitter.com/arthurperret'
 extra_css:
     - css/custom.css

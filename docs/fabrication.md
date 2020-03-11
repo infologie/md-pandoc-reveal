@@ -68,7 +68,9 @@ Il faut que le contenu s'y prête et cela nécessite de la gymnastique. Dans une
 
 ## Recommandations sur les images
 
+```
 ![](img/paysage.005.png)
+```
 
 Résolution élevée, grande taille et zoom <kbd>Alt</kbd>+<kbd>clic</kbd>
 
@@ -76,9 +78,11 @@ Un bon début consiste à définir les dimensions maximales d'affichage des imag
 
 ## Juxtaposition horizontale 
 
+```
 ![](img/paysage.002.png)
 
 ![](img/paysage.004.png)
+```
 
 La comparaison est un bon outil analytique. Il est facile de juxtaposer des images si elles sont au format paysage et de ratio équivalent : on les inclut normalement, séparées par deux retours à la ligne.
 
@@ -86,8 +90,10 @@ Par défaut, Reveal ne propose pas de solution pour afficher du contenu qui dép
 
 ## Juxtaposition verticale
 
+```
 ![](img/portrait.001.png)
 ![](img/portrait.003.png)
+```
 
 Pour juxtaposer deux images au format portrait, il faut juste les séparer par un retour à la ligne. En Markdown, il faut deux retours à la ligne pour séparer deux paragraphes. En séparant des images par un seul retour à la ligne, elles appartiennent au même paragraphe et sont donc positionnées sur une même ligne.
 
@@ -95,28 +101,34 @@ Assembler deux images et afficher le résultat en image de fond constitue une bo
 
 ## Alignement d'images
 
+```
 ![](img/carre.001.png)
 ![](img/carre.002.png)
 ![](img/carre.003.png)
 ![](img/carre.004.png)
 ![](img/carre.005.png)
 ![](img/carre.006.png)
+```
 
 Un retour à la ligne automatique (*wrap*) intervient lorsque les images mises bout à bout excèdent la largeur de l'écran.
 
 ## Figures
 
+```
 ![Légende](img/portrait.003.png)
+```
 
 Pandoc traite les images contenant du texte alternatif comme une figure avec image et légende.
 
 ## Plusieurs figures
 
+```
 ![Légende](img/carre.002.png)
 
 ![Légende](img/carre.004.png)
 
 ![Légende](img/carre.006.png)
+```
 
 Contrairement aux images simples, Pandoc traite les figures comme des blocs. <https://pandoc.org/MANUAL.html#extension-implicit_figures>
 
@@ -124,10 +136,8 @@ Pour juxtaposer plusieurs figures en ligne, il faut reproduire la situation des 
 
 ## Légende sur le côté
 
-![Une figure contient une image *(img)* et une légende *(figcaption)* positionnée dessous. Pour tirer le meilleur parti des contraintes spatiales de l'écran, on peut vouloir modifier leur disposition, par exemple en mettant la légende sur le côté quand l'image s'y prête.](img/paysage.001.png)
+Une figure contient une image *(img)* et une légende *(figcaption)* positionnée dessous. Pour tirer le meilleur parti des contraintes spatiales de l'écran, on peut vouloir modifier leur disposition, par exemple en mettant la légende sur le côté quand l'image s'y prête.
 
-![Art génératif via Processing, Étienne Jacob, 2018](img/EtienneJacob2018.webp)
+## Combinaisons
 
-On peut combiner les attributs de section à des attributs d'élément, ici sur une image, pour des effets visuels particulièrement prononcés. <https://pandoc.org/MANUAL.html#extension-link_attributes>
-
-Source : <https://necessary-disorder.tumblr.com/post/180757120663>
+On peut combiner les attributs de section à des attributs d'élément pour des effets visuels particulièrement prononcés. <https://pandoc.org/MANUAL.html#extension-link_attributes>
