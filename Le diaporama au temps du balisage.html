@@ -8,8 +8,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="/Users/aperret/Library/Mobile Documents/com~apple~CloudDocs/Recherche/Code/reveal.js/css/reset.css">
-  <link rel="stylesheet" href="/Users/aperret/Library/Mobile Documents/com~apple~CloudDocs/Recherche/Code/reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="https://revealjs.com/css/reset.css">
+  <link rel="stylesheet" href="https://revealjs.com/css/reveal.css">
   <style>
       code{white-space: pre-wrap;}
       span.smallcaps{font-variant: small-caps;}
@@ -81,18 +81,18 @@ code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="/Users/aperret/Library/Mobile Documents/com~apple~CloudDocs/Recherche/Code/reveal.js/css/theme/white.css" id="theme">
-  <link rel="stylesheet" href="/Users/aperret/Library/Mobile Documents/com~apple~CloudDocs/Recherche/Code/CSS/prez.css"/>
+  <link rel="stylesheet" href="https://revealjs.com/css/theme/white.css" id="theme">
+  <link rel="stylesheet" href="prez.css"/>
   <!-- Printing and PDF exports -->
   <script>
     var link = document.createElement( 'link' );
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    link.href = window.location.search.match( /print-pdf/gi ) ? '/Users/aperret/Library/Mobile Documents/com~apple~CloudDocs/Recherche/Code/reveal.js/css/print/pdf.css' : '/Users/aperret/Library/Mobile Documents/com~apple~CloudDocs/Recherche/Code/reveal.js/css/print/paper.css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'https://revealjs.com/css/print/pdf.css' : 'https://revealjs.com/css/print/paper.css';
     document.getElementsByTagName( 'head' )[0].appendChild( link );
   </script>
   <!--[if lt IE 9]>
-  <script src="/Users/aperret/Library/Mobile Documents/com~apple~CloudDocs/Recherche/Code/reveal.js/lib/js/html5shiv.js"></script>
+  <script src="https://revealjs.com/lib/js/html5shiv.js"></script>
   <![endif]-->
 </head>
 <body>
@@ -114,7 +114,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Frommer, F. (2010). <em>La pensée Powerpoint : enquête sur ce logiciel qui rend stupide</em>. Paris : La Découverte.</p>
 </div>
 <div id="ref-roblesanderson2016">
-<p>Robles-Anderson, E., &amp; Svensson, P. (2016). « One Damn Slide After Another »: PowerPoint at Every Occasion for Speech. <em>Computational Culture</em>, (5). <a href="http://computationalculture.net/one-damn-slide-after-another-powerpoint-at-every-occasion-for-speech/">http://computationalculture.net/one-damn-slide-after-another-powerpoint-at-every-occasion-for-speech/</a></p>
+<p>Robles-Anderson, E., &amp; Svensson, P. (2016). « One Damn Slide After Another »: PowerPoint at Every Occasion for Speech. <em>Computational Culture</em>, (5).</p>
 </div>
 <div id="ref-tufte2003">
 <p>Tufte, E. R. (2003). <em>The Cognitive Style of PowerPoint: Pitching Out Corrupts Within</em>. Cheshire : Graphics Press.</p>
@@ -220,6 +220,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Dans la commande ci-dessus : l’ordre des différentes options n’a pas d’importance et la séparation en lignes distinctes est faite uniquement par commodité visuelle. Première ligne : fichiers en entrée et en sortie. Deuxième ligne : concerne les références bibliographiques, s’il y en a. Troisième ligne : options de Reveal.</p>
 <p>La liste complète des options est ici : <a href="https://github.com/hakimel/reveal.js#configuration" class="uri">https://github.com/hakimel/reveal.js#configuration</a>. <code>history=false</code> évite de peupler l’historique du navigateur avec chaque passage de slide. <code>transition=none</code> économise du temps et de l’énergie.</p>
 <p>Les thèmes prédéfinis sont globalement assez vilains. Le thème <em>white</em> (noir sur fond blanc) fournit une meilleure base pour personnaliser que le thème par défaut. Certains recommandent de tout jeter et repartir de zéro, cf. <a href="https://www.chenhuijing.com/blog/customising-revealjs-beyond-theming/" class="uri">https://www.chenhuijing.com/blog/customising-revealjs-beyond-theming/</a></p>
+<p>Pour indiquer à Pandoc où se trouve Reveal, il faut inclure l’option <code>revealjs-url</code> dans la commande. Cette URL peut pointer vers une version en ligne ou bien une copie locale sur votre machine.</p>
 </aside>
 </section><section id="assemblage-du-système" class="slide level2">
 <h2>Assemblage du système</h2>
@@ -369,7 +370,7 @@ Contenu (texte, image, etc.)
     </div>
   </div>
 
-  <script src="/Users/aperret/Library/Mobile Documents/com~apple~CloudDocs/Recherche/Code/reveal.js/js/reveal.js"></script>
+  <script src="https://revealjs.com/js/reveal.js"></script>
 
   <script>
 
@@ -383,9 +384,9 @@ Contenu (texte, image, etc.)
 
         // Optional reveal.js plugins
         dependencies: [
-          { src: '/Users/aperret/Library/Mobile Documents/com~apple~CloudDocs/Recherche/Code/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: '/Users/aperret/Library/Mobile Documents/com~apple~CloudDocs/Recherche/Code/reveal.js/plugin/zoom-js/zoom.js', async: true },
-          { src: '/Users/aperret/Library/Mobile Documents/com~apple~CloudDocs/Recherche/Code/reveal.js/plugin/notes/notes.js', async: true }
+          { src: 'https://revealjs.com/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'https://revealjs.com/plugin/zoom-js/zoom.js', async: true },
+          { src: 'https://revealjs.com/plugin/notes/notes.js', async: true }
         ]
       });
     </script>

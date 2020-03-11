@@ -1,10 +1,4 @@
-/* THÈME POUR REVEAL - ARTHUR PERRET 2020
-   SOMMAIRE :
-     TYPOGRAPHIE, COULEURS, IMAGES, FIGURES,
-     IFRAMES, LISTES, CRÉDITS, BIBLIOGRAPHIE,
-     TABLEAUX, ASTÉRISMES, NUMÉRO DE SLIDE,
-     CODE, FLEX, DÉFILEMENT. */
-
+/* THÈME POUR REVEAL */
 /* TYPOGRAPHIE */
 .reveal {
 	font-family: "EB Garamond", Georgia, serif;
@@ -16,27 +10,26 @@
 .reveal h4,
 .reveal h5,
 .reveal h6,
-.reveal .subtitle {
-	font-family: "Helvetica Neue", Helvetica, sans-serif;
+p.subtitle {
+	font-family: "SF Pro Display", "Helvetica Neue", Helvetica, sans-serif;
 	font-weight: 800;
 	font-style: normal;
 	text-align: left;
 	text-transform: none;
 	font-size: 1.3em;
 }
+.reveal .title-slide h1,
+.reveal .title-slide h2,
+.reveal .title-slide h3 {
+	text-align: center;
+}
 .reveal pre,
 .reveal code,
 .reveal table,
 a.uri {
-	font-family: Inconsolata, Consolas, monospace;
+	font-family: Inconsolata, monospace;
 	font-variant-ligatures: none;
 	font-size: 0.7em;
-}
-span.phonetic {
-	font-family: "DejaVu Sans", sans-serif;
-}
-span.sans {
-	font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 .reveal h1.title {
 	margin: 1em auto 0 auto;
@@ -50,22 +43,15 @@ span.sans {
 	content: '❧';
 	font-size: 1.5em;
 }
-.reveal .author,
-.reveal .date {
-	margin: 0;
-}
-.center,
-h1.title,
-p.subtitle,
-p.author,
-p.date
-.reveal .title-slide h1,
-.reveal .title-slide h2,
-.reveal .title-slide h3 {
+.reveal .author, .reveal .date { margin:0 }
+h1.title, p.subtitle, p.author, p.date {
 	text-align: center;
 }
 p {
 	text-align: left;
+}
+.center {
+	text-align: center;
 }
 .reveal blockquote {
 	width: 95%;
@@ -76,8 +62,7 @@ p {
 	box-shadow: none;
 	background: inherit;
 }
-.reveal blockquote p:first-child,
-.reveal blockquote p:last-child {
+.reveal blockquote p:first-child, .reveal blockquote p:last-child {
     display: block;
 }
 .reveal table {
@@ -87,24 +72,45 @@ p {
 	font-weight: normal;
 }
 
-/* COULEURS */
-.reveal a {
-	color: #a00000;
+/* ASTÉRISMES */
+hr {
+    background: none;
+    border: 0;
+    margin: 0.5em 0 0 0;
+    padding: 0;
 }
-.reveal .controls,
-.reveal .progress {
-	background: #999999;
-	color: #555555;
+hr::after {
+    content: '⁂';
+    display: block;
+    opacity: 1;
+    line-height: 1;
+    text-align: center;
+    font-family: "EB Garamond", serif;
+    color: #131313;
+    font-size: 0.5em;
 }
-.slides section.has-dark-background h2,
-.slides section.has-dark-background h3,
-div.has-dark-background .slide-number {
-	color: #fff;
+
+/* SPANS TYPO */
+span.regular {
+	font-weight: 400;
 }
-.slides section.has-dark-background h2,
-.slides section.has-dark-background h3 {
-	text-align: center;
-	font-size: 1.7em;
+span.medium {
+	font-weight: 500;
+}
+span.semibold {
+	font-weight: 600;
+}
+span.bold {
+	font-weight: 700;
+}
+span.extrabold {
+	font-weight: 800;
+}
+span.phonetic {
+	font-family: "DejaVu Sans", sans-serif;
+}
+span.sans {
+	font-family: "SF Pro Display", "Helvetica Neue", Helvetica, sans-serif;
 }
 
 /* IMAGES */
@@ -117,7 +123,8 @@ div.has-dark-background .slide-number {
 	max-height: calc(64vh);
     max-width: calc(64vw);
 }
-.reveal section .borderless {
+.reveal section .borderless,
+.reveal section .borderless figure img {
 	border: none;
 	box-shadow: none;
 }
@@ -169,9 +176,11 @@ iframe {
 .reveal ul, .reveal ol {
 	margin: 0 0 0 0;
 }
+
 dd {
 	padding-bottom: 0.5em;
 }
+
 .reveal ul {
     list-style-type: '— ';
 }
@@ -208,23 +217,34 @@ dd {
 }
 
 /* BIBLIOGRAPHIE */
+#credits + p {
+	font-size: 0.75em;
+	font-family: "EB Garamond ExtraBold";
+	margin-bottom: 0;
+	margin-top: 1em;
+/* 	text-align: center; */
+}
 #refs p {
 	font-size: 0.5em;
 	text-indent: -3em;
 	padding-left: 3em;
+/* 	line-height: 0.8; */
 }
 #refs {
 	max-height: 7em;
 	overflow: scroll;
 	scrollbar-width: none;
 }
+
 #refs::-webkit-scrollbar { 
 	display: none;
 }
 
 /* TABLEAUX */
+
 .reveal table {
     width: auto;
+/*     margin: 0 auto 0 0; */
     border-spacing: 0px;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
@@ -246,36 +266,34 @@ dd {
 	font-style: normal;
 }
 
-/* ASTÉRISMES */
-hr {
-    background: none;
-    border: 0;
-    margin: 0.5em 0 0 0;
-    padding: 0;
+/* COULEURS */
+.reveal a {
+	color: #a00000;
 }
-hr::after {
-    content: '⁂';
-    display: block;
-    opacity: 1;
-    line-height: 1;
-    text-align: center;
-    font-family: "EB Garamond", Georgia, serif;
-    color: #131313;
-    font-size: 0.5em;
+.reveal .controls,
+.reveal .progress {
+	background: #999999;
+	color: #555555;
+}
+.slides section.has-dark-background *,
+div.has-dark-background .slide-number {
+	color: #fff;
 }
 
-/* NUMÉRO DE SLIDE (si activé) */
+/* PIED-DE-PAGE */
 .reveal .slide-number {
 	position: absolute;
 	display: block;
 	right: 1em;
 	bottom: 0.6em;
 	z-index: 31;
-	font-family: "EB Garamond", Georgia, serif;
+	font-family: "EB Garamond", serif;
 	font-variant-numeric: oldstyle-nums;
 	font-size: 0.5em;
+/* 	line-height: 1; */
 	color: currentColor;
 	background-color: rgba(0, 0, 0, 0);
+/* 	padding: 5px; */
 }
 .reveal .slide-number a {
 	color: currentColor;
@@ -356,7 +374,7 @@ kbd {
     max-width: calc(60vw);
 }
 
-/* DÉFILEMENT */
+/* SCROLL */
 .long {
     overflow-y: auto  !important;
     overflow-x: visible !important;
