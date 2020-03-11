@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Arthur Perret">
+  <title>Le diaporama au temps du balisage</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="/Users/aperret/Library/Mobile Documents/com~apple~CloudDocs/Recherche/Code/reveal.js/css/reset.css">
+  <link rel="stylesheet" href="/Users/aperret/Library/Mobile Documents/com~apple~CloudDocs/Recherche/Code/reveal.js/css/reveal.css">
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style>
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="/Users/aperret/Library/Mobile Documents/com~apple~CloudDocs/Recherche/Code/reveal.js/css/theme/white.css" id="theme">
+  <link rel="stylesheet" href="/Users/aperret/Library/Mobile Documents/com~apple~CloudDocs/Recherche/Code/CSS/prez.css"/>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? '/Users/aperret/Library/Mobile Documents/com~apple~CloudDocs/Recherche/Code/reveal.js/css/print/pdf.css' : '/Users/aperret/Library/Mobile Documents/com~apple~CloudDocs/Recherche/Code/reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="/Users/aperret/Library/Mobile Documents/com~apple~CloudDocs/Recherche/Code/reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Le diaporama au temps du balisage</h1>
+  <p class="subtitle">Markdown, Pandoc, Reveal</p>
+  <p class="author">Arthur Perret</p>
+  <p class="date">Février 2020</p>
+</section>
+
+<section><section id="introduction" class="title-slide slide level1" data-background="#8DA0CB"><h1>Introduction</h1></section><section id="remarque-préalable" class="slide level2">
+<h2>Remarque préalable</h2>
+<p>Une présentation scientifique doit se penser en termes de raison graphique, à contre-courant de la culture présentationnelle dominante façonnée par PowerPoint. Ne pas le faire, c’est saboter sa propre énonciation.</p>
+<div id="refs" role="doc-bibliography">
+<div id="ref-frommer2010">
+<p>Frommer, F. (2010). <em>La pensée Powerpoint : enquête sur ce logiciel qui rend stupide</em>. Paris : La Découverte.</p>
+</div>
+<div id="ref-roblesanderson2016">
+<p>Robles-Anderson, E., &amp; Svensson, P. (2016). « One Damn Slide After Another »: PowerPoint at Every Occasion for Speech. <em>Computational Culture</em>, (5). <a href="http://computationalculture.net/one-damn-slide-after-another-powerpoint-at-every-occasion-for-speech/">http://computationalculture.net/one-damn-slide-after-another-powerpoint-at-every-occasion-for-speech/</a></p>
+</div>
+<div id="ref-tufte2003">
+<p>Tufte, E. R. (2003). <em>The Cognitive Style of PowerPoint: Pitching Out Corrupts Within</em>. Cheshire : Graphics Press.</p>
+</div>
+</div>
+<aside class="notes">
+<p>À ces trois références, on peut ajouter les nombreux travaux de l’équipe d’Yves Jeanneret et Emmanuël Souchier, avec les concepts d’architexte, de plastigramme, etc.</p>
+</aside>
+</section><section id="deux-points-de-vigilance" class="slide level2">
+<h2>Deux points de vigilance</h2>
+<p>La liste à puces est souvent une béquille creuse qui tend à effacer les liens entre les étapes d’un raisonnement.</p>
+<p>Pour représenter efficacement de l’information, il faut acquérir des notions de composition, d’édition, de design (hiérarchie, blanc, densité, résolution, etc.) sous peine de contre-productivité fatale (« <em>Death by PowerPoint</em> »).</p>
+<p>C’est là que la courbe d’apprentissage est la plus pentue, et le bénéfice intellectuel le plus grand.</p>
+<aside class="notes">
+<p>Ce fichier a pour vocation de servir d’exemple technique. Il en découle donc une présentation qui contient des slides avec un mur de texte, des images vides de sens, des listes à puces, des titres trop longs, etc. C’est normal. La feuille de style incluse est imparfaite. Tout le monde ne peut pas être l’enfant caché d’Edward Tufte et Jen Simmons.</p>
+</aside>
+</section><section id="desiderata" class="slide level2">
+<h2><em>Desiderata</em></h2>
+<ul>
+<li><strong>Pérennité</strong> : travailler avec un format léger, ouvert, facile à lire et à écrire.</li>
+<li><strong>Efficacité</strong> : automatiser, éditer précisément, reproduire rapidement et sûrement.</li>
+<li><strong>Fonctionnalité</strong> : bénéficier des innovations du web – mise en page adaptative, défilement, transclusion, etc.</li>
+<li><strong>Liberté</strong> : accroître son agilité informatique, choisir ses dépendances logicielles en toute conscience.</li>
+</ul>
+<aside class="notes">
+<p>La suite Office (Word, Excel, PowerPoint) et la suite Google (Docs, Sheets, Slides) ne nous apprennent strictement rien sur la fabrique du Web. Ce qu’on peut réaliser avec quelques lignes de texte brut me paraît bien plus intéressant dans une perspective de culture numérique. Les compétences de mise en page qu’on apprend pour styler une présentation en Reveal.js, par exemple, sont transférables à toute autre projet qui utilise les technologies du Web – notamment l’édition.</p>
+</aside>
+</section><section id="solution-proposée" class="slide level2">
+<h2>Solution proposée</h2>
+<ul>
+<li>Écriture en Markdown (avec les ajouts de Pandoc).</li>
+<li>Mise en forme via CSS.</li>
+<li>Conversion en HTML (avec Reveal.js) via Pandoc.</li>
+</ul>
+<aside class="notes">
+<p>Pourquoi Markdown avec Pandoc, et pas Asciidoc avec Asciidoctor ? C’est une question de complexité : la sémantique d’Asciidoc (héritée de DocBook XML) et l’univers logiciel d’Asciidoctor (Ruby, NodeJS) sont trop lourds pour mes besoins. Je pense que ces outils parlent plus facilement aux développeurs, aux ingénieurs, ainsi qu’aux documentalistes techniques.</p>
+</aside>
+</section></section>
+<section><section id="composants-du-système" class="title-slide slide level1" data-background="#66C2A5"><h1>Composants du système</h1></section><section id="markdown" class="slide level2">
+<h2>Markdown</h2>
+<p>Markdown est un langage de balisage léger, inventé pour écrire plus facilement en HTML. Volontairement basique, sa syntaxe contient :</p>
+<ul>
+<li>des éléments en ligne comme <em>emphase simple</em>, <strong>emphase forte</strong>, <a href="https://artorig.github.io/tutomd/">lien</a>, <code>code</code> ;</li>
+<li>des éléments en bloc comme liste, citation, code, etc.</li>
+</ul>
+<aside class="notes">
+<p>Il existe de multiples variantes qui étendent Markdown dans différentes directions, ainsi qu’une spécification de la syntaxe de base : <a href="https://commonmark.org/">CommonMark</a>. J’ai traduit le tutoriel Markdown de CommonMark, à cette adresse : <a href="https://artorig.github.io/tutomd/" class="uri">https://artorig.github.io/tutomd/</a>.</p>
+</aside>
+</section><section id="css" class="slide level2">
+<h2>CSS</h2>
+<p>CSS est le langage de mise en forme du web. C’est un outil simple mais puissant. Son principal défaut est indirect : les navigateurs n’appliquent pas toujours toutes les fonctionnalités CSS, ni de manière identique.</p>
+<p>Il faut absolument lire et intégrer <a href="https://developer.mozilla.org/fr/docs/Apprendre/CSS/Building_blocks/Cascade_et_heritage">les principes de cascade et d’héritage</a> pour comprendre comment ça marche et résoudre d’éventuels problèmes.</p>
+<aside class="notes">
+<p>Reveal fait coexister plusieurs feuilles de style (CSS de base, thème prédéfini) auxquelles on rajoute souvent sa propre CSS. Comprendre laquelle s’applique où et pourquoi est indispensable en cas de problème.</p>
+<p>Le rendu varie en fonction du navigateur. Je recommande Firefox.</p>
+</aside>
+</section><section id="reveal" class="slide level2">
+<h2>Reveal</h2>
+<p>Reveal est une collection de fichiers CSS et Javascript qui permettent de représenter un fichier HTML sous forme de présentation interactive.</p>
+<p>Ceci permet de combiner les fonctionnalités classiques des logiciels de présentation (transitions, affichage avec notes…) avec celles du web.</p>
+<aside class="notes">
+<p>Le code de Reveal est <em>open source</em> : <a href="https://github.com/hakimel/reveal.js/" class="uri">https://github.com/hakimel/reveal.js/</a></p>
+<p>Le <em>div</em> notes est spécial : c’est un <em>div</em> prédéfini, qui ne se note pas avec des accolades, et qui permet de produire des notes d’intervenant pour le mode présentation de Reveal. Son contenu peut être formaté en Pandoc Markdown. C’est une <em>pop-up</em> qu’on peut faire apparaître via la touche S du clavier, sous réserve d’autoriser dans son navigateur les <em>pop-ups</em> en provenance du fichier de présentation.</p>
+</aside>
+</section><section id="section" class="slide level2">
+<h2></h2>
+<p>Un argument phare de la présentation en HTML est la <strong>transclusion</strong> : on peut y inclure presque n’importe quel contenu web via un cadre interactif (<em>iframe</em>).</p>
+<iframe src="https://fr.wikipedia.org/wiki/Transclusion" class="stretch">
+</iframe>
+<aside class="notes">
+<p>Un site peut être configuré pour qu’il ne soit pas possible de l’inclure dans des <em>iframes</em>. Ce n’est pas courant mais cela existe.</p>
+<p>Notez la classe <em>stretch</em> appliquée à l’<em>iframe</em>. Elle est définie dans la CSS de Reveal et étire l’élément pour qu’il occupe la hauteur et la largeur disponible relativement au reste de la slide. On peut aussi l’appliquer aux images en tirant parti d’une syntaxe plus légère grâce à Pandoc (voir plus loin).</p>
+</aside>
+</section><section id="pandoc" class="slide level2">
+<h2>Pandoc</h2>
+<p>Pandoc est un logiciel de conversion entre langages de balisage. On l’utilise ici pour transformer du Markdown en présentation HTML Reveal.</p>
+<p>Pandoc permet de pousser très loin le compromis entre simplicité et fonctionnalité inhérent à Markdown grâce à des extensions de la syntaxe de base, ainsi que des options de paramétrage de Reveal.</p>
+</section><section id="ajouts-de-pandoc-à-markdown" class="slide level2">
+<h2>Ajouts de Pandoc à Markdown</h2>
+<p>Des <strong>modifications</strong> ou <strong>extensions</strong> des éléments existants.</p>
+<p>Des <strong>éléments nouveaux</strong> : maths, notes de bas de page, références bibliographiques, liste de définitions…</p>
+<p>De la <strong>mise en forme</strong> : coloration syntaxique du code mais surtout une syntaxe raccourcie pour les <em>div</em> et <em>span</em> qui permet d’introduire de la mise en forme facilement.</p>
+<aside class="notes">
+<p>Les spécificités du Pandoc Markdown introduisent de la dette technique. Mais elles répondent utilement à des besoins importants sans trop retrancher aux avantages du langage de base. Et l’auteur de Pandoc est au centre de l’initiative CommonMark.</p>
+</aside>
+</section><section id="section-1" class="slide level2">
+<h2></h2>
+<p>Un exemple d’ajout, l’intégration d’une gestion automatisée des références bibliographiques :</p>
+<blockquote>
+<p>« PowerPoint offre une vision simplifiée et fragmentée pour être accessible et reproductible ; il donne l’illusion de produire du spectaculaire pour séduire ; il est minimaliste pour esquiver la critique. » <span class="citation" data-cites="frommer2010">(Frommer, 2010, p. 252)</span></p>
+</blockquote>
+<aside class="notes">
+<p>Pandoc place la liste des références citées dans un <em>div</em> avec l’identifiant <em>refs</em>. Si l’auteur ne le positionne pas lui-même, Pandoc l’ajoute automatiquement à la fin du document. Dans cette présentation par exemple, le <em>div</em> a été mis au début.</p>
+</aside>
+</section><section id="paramétrage-de-reveal-via-pandoc" class="slide level2">
+<h2>Paramétrage de Reveal via Pandoc</h2>
+<p>Dans le fichier : notes d’intervenant, attributs de slide.</p>
+<p>À la conversion : numérotation des slides, visibilité des boutons, type de transition, thème graphique, etc.</p>
+<pre><code>pandoc -f markdown in.md -o out.html -t revealjs -s -c prez.css
+--filter=pandoc-citeproc --bibliography biblio.bib --csl apa-fr.csl
+-V theme=white -V history=false -V transition=none</code></pre>
+<aside class="notes">
+<p>Dans la commande ci-dessus : l’ordre des différentes options n’a pas d’importance et la séparation en lignes distinctes est faite uniquement par commodité visuelle. Première ligne : fichiers en entrée et en sortie. Deuxième ligne : concerne les références bibliographiques, s’il y en a. Troisième ligne : options de Reveal.</p>
+<p>La liste complète des options est ici : <a href="https://github.com/hakimel/reveal.js#configuration" class="uri">https://github.com/hakimel/reveal.js#configuration</a>. <code>history=false</code> évite de peupler l’historique du navigateur avec chaque passage de slide. <code>transition=none</code> économise du temps et de l’énergie.</p>
+<p>Les thèmes prédéfinis sont globalement assez vilains. Le thème <em>white</em> (noir sur fond blanc) fournit une meilleure base pour personnaliser que le thème par défaut. Certains recommandent de tout jeter et repartir de zéro, cf. <a href="https://www.chenhuijing.com/blog/customising-revealjs-beyond-theming/" class="uri">https://www.chenhuijing.com/blog/customising-revealjs-beyond-theming/</a></p>
+</aside>
+</section><section id="assemblage-du-système" class="slide level2">
+<h2>Assemblage du système</h2>
+<p>Plutôt qu’exécuter Pandoc manuellement, mieux vaut écrire un script ou utiliser un logiciel. Exemple (macOS) :</p>
+<ul>
+<li>outils système (Automator, AppleScript) ;</li>
+<li>éditeur de texte généraliste scriptable (ex : BBEdit) ;</li>
+<li>éditeur spécialisé bâti autour de Pandoc (ex : Zettlr).</li>
+</ul>
+<aside class="notes">
+<p>Un script pour BBEdit est fourni avec ce fichier à titre d’exemple.</p>
+</aside>
+</section></section>
+<section><section id="fabrication-dune-présentation" class="title-slide slide level1" data-background="#FC8D62"><h1>Fabrication d’une présentation</h1></section><section id="première-slide" class="slide level2">
+<h2>Première slide</h2>
+<p>Le bloc de métadonnées en YAML au début du fichier Markdown permet de fournir les éléments de la première slide, qui est créée automatiquement. Il peut aussi contenir des options propres à Pandoc.</p>
+</section><section id="slides" class="slide level2">
+<h2>Slides</h2>
+<p>Un titre signale le début d’une nouvelle slide. Un seul niveau de titre dans tout le document crée une présentation linéaire ; utiliser deux niveaux différents crée une présentation en deux dimensions, avec un défilement horizontal et vertical.</p>
+<p>Si on ne met que les croisillons, cela crée un élément titre mais sans contenu textuel, donc une nouvelle slide mais non titrée.</p>
+<aside class="notes">
+<p>Pour une présentation à deux niveaux de titre, il faut respecter une règle assez précise. Au niveau de titre le plus élevé des deux, il ne faut mettre que des titres, aucun contenu (texte, image, etc.) : il faut imaginer une règle disant qu’un titre de section doit toujours être suivi directement d’un titre de sous-section.</p>
+<p>Cette disposition se justifie surtout dans deux cas : pour faciliter les aller-retours dans un long diaporama ; pour produire une version à distribuer (PDF, docx…) un peu structurée.</p>
+<p>À noter que le public peut ignorer totalement que la présentation est sur deux niveaux si les effets de transition et les boutons sont masqués, et que l’orateur ne bascule jamais l’affichage en mode <em>overview</em> (touche O).</p>
+</aside>
+</section><section id="contenu" class="slide level2">
+<h2>Contenu</h2>
+<p>Toute la syntaxe Markdown est utilisable. On peut également inclure du HTML pour certains éléments rares mais utiles (<em>iframe</em>, <em>kbd</em>, etc.).</p>
+</section><section id="attributs-de-slide" class="slide level2">
+<h2>Attributs de slide</h2>
+<p><code># Titre {data-background-color="#000000"}</code></p>
+<p>Ils viennent modifier le fond d’une slide en y affichant une couleur, image, vidéo ou <em>iframe</em> indiquée entre accolades.</p>
+<p>L’<em>iframe</em> en fond est particulièrement intéressante pour montrer des ressources web en tirant parti de la totalité de l’écran (voir slide suivante).</p>
+<aside class="notes">
+<p>Les couleurs peuvent être identifiées par un nom dans le cas des couleurs nommées (ex : blue, red) et par leurs différents codes dans tous les cas (hexadécimal, rgb, rgba…). Les autres ressources sont incluses via leur URL (local ou distant).</p>
+<p>Lorsqu’on inclut une <em>iframe</em> qui prend toute la taille de l’écran avec <code>data-background-iframe</code>, il peut être une bonne idée de laisser les contrôles Reveal apparents avec l’option <code>-V controls=true</code> de Pandoc. En effet, interagir avec le contenu de l’iframe déplace le cadre de l’interaction : les touches du clavier ne déclenchent alors plus les fonctions de Reveal, comme le défilement des slides. Laisser les boutons visibles permet de passer à la slide suivante et de reprendre le cours normal de la présentation.</p>
+</aside>
+</section><section id="section-2" class="slide level2" data-background-iframe="https://pandoc.org/MANUAL.html">
+<h2></h2>
+</section><section id="spans-et-divs" class="slide level2">
+<h2><em>Spans</em> et <em>divs</em></h2>
+<p>Pandoc propose une syntaxe raccourcie pour appliquer des attributs (classes et identifiants CSS) à certains éléments ou groupe d’éléments. Ceci crée des <em>spans</em> et des <em>divs</em> en HTML.</p>
+<p><code>[texte]{attribut}</code><br />
+<code>![légende](image.jpg){attribut}</code></p>
+<pre><code>::: {.attribut}
+Contenu (texte, image, etc.)
+:::</code></pre>
+</section><section id="section-3" class="slide level2">
+<h2></h2>
+<p>Exemple : <span class="smallcaps">css</span> est en petites capitales car Pandoc rajoute la déclaration suivante pendant la conversion :</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">.smallcaps</span> { <span class="kw">font-variant</span>: <span class="dv">small-caps</span><span class="op">;</span> }</span></code></pre></div>
+<p>Partant de ce principe, on peut introduire ses propres règles de mise en forme ou réutiliser un jeu de règles existantes.</p>
+<aside class="notes">
+<p>Par exemple, la CSS appliquée à cette présentation ajoute une bordure et une ombre aux images, ainsi qu’une classe <em>borderless</em> à appliquer manuellement aux exceptions. On pourrait très bien faire l’inverse.</p>
+<p>C’est le principe des macros dans les traitements de texte ou dans LaTeX.</p>
+</aside>
+</section><section id="édition-multicanal" class="slide level2">
+<h2>Édition multicanal</h2>
+<p><img data-src="img/multicanal.png" class="borderless" /></p>
+<aside class="notes">
+<p>Dans Reveal, le contenu du <em>div</em> notes ne s’affiche que dans le mode présentateur. Mais si on convertit le fichier source en Markdown dans un autre format, ce dernier affichera les notes sans aucun traitement spécifique, car un <em>div</em> n’a de sens qu’en HTML et CSS – Pandoc ne le prend en compte que lorsqu’on fabrique une présentation Reveal. En s’appuyant sur ce constat, on peut utiliser une autre commande Pandoc sur le même fichier pour créer un document distribuable (<em>handout</em>) reprenant tout le contenu (en PDF, docx, etc.).</p>
+<p>Grâce aux attributs rajoutés à Markdown par Pandoc, on peut même aller un cran plus loin. CSS permet d’afficher ou masquer des éléments grâce à la propriété <code>display</code>, ce qui signifie qu’on peut rédiger le fichier source de manière à masquer une partie du contenu côté présentation (blocs entiers via <em>divs</em> et fragments intra-blocs via <em>spans</em>) et générer d’autre part un PDF qui affiche tout.</p>
+<p>Il faut que le contenu s’y prête et cela nécessite de la gymnastique. Dans une certaine mesure, il s’agit d’emprunter une certaine conception lettrée de la programmation (<em>literate programming</em>, Donald Knuth) et de l’appliquer à Pandoc : ce dernier étant capable de tisser (<em>weave</em>) différents documents à partir d’un même fichier, on peut jouer sur les différences entre formats pour mettre en œuvre un processus d’édition multicanal.</p>
+</aside>
+</section><section id="recommandations-sur-les-images" class="slide level2">
+<h2>Recommandations sur les images</h2>
+<p><img data-src="img/paysage.005.png" /></p>
+<p>Résolution élevée, grande taille et zoom <kbd>Alt</kbd>+<kbd>clic</kbd></p>
+<aside class="notes">
+<p>Un bon début consiste à définir les dimensions maximales d’affichage des images proportionnellement à la taille de l’écran. C’est plus facile à dire qu’à faire. Il faut par exemple considérer qu’une image dans une figure devrait être moins grande qu’une image standard, pour accommoder la légende positionnée dessous.</p>
+</aside>
+</section><section id="juxtaposition-horizontale" class="slide level2 long">
+<h2>Juxtaposition horizontale</h2>
+<p><img data-src="img/paysage.002.png" /></p>
+<p><img data-src="img/paysage.004.png" /></p>
+<aside class="notes">
+<p>La comparaison est un bon outil analytique. Il est facile de juxtaposer des images si elles sont au format paysage et de ratio équivalent : on les inclut normalement, séparées par deux retours à la ligne.</p>
+<p>Par défaut, Reveal ne propose pas de solution pour afficher du contenu qui dépasserait la hauteur de la slide. Quelques lignes de CSS suffisent toutefois à créer une classe qui vient ajouter du défilement en cas de besoin (ici la classe <em>long</em>).</p>
+</aside>
+</section><section id="juxtaposition-verticale" class="slide level2">
+<h2>Juxtaposition verticale</h2>
+<p><img data-src="img/portrait.001.png" /> <img data-src="img/portrait.003.png" /></p>
+<aside class="notes">
+<p>Pour juxtaposer deux images au format portrait, il faut juste les séparer par un retour à la ligne. En Markdown, il faut deux retours à la ligne pour séparer deux paragraphes. En séparant des images par un seul retour à la ligne, elles appartiennent au même paragraphe et sont donc positionnées sur une même ligne.</p>
+<p>Assembler deux images et afficher le résultat en image de fond constitue une bonne option pour occuper exactement l’espace maximum disponible, si on n’a pas besoin de légende et si on maîtrise la résolution d’affichage.</p>
+</aside>
+</section><section id="alignement-dimages" class="slide level2">
+<h2>Alignement d’images</h2>
+<p><img data-src="img/carré.001.png" /> <img data-src="img/carré.002.png" /> <img data-src="img/carré.003.png" /> <img data-src="img/carré.004.png" /> <img data-src="img/carré.005.png" /> <img data-src="img/carré.006.png" /></p>
+<aside class="notes">
+<p>Un retour à la ligne automatique (<em>wrap</em>) intervient lorsque les images mises bout à bout excèdent la largeur de l’écran.</p>
+</aside>
+</section><section id="figures" class="slide level2">
+<h2>Figures</h2>
+<figure>
+<img data-src="img/portrait.003.png" alt="" /><figcaption>Légende</figcaption>
+</figure>
+<aside class="notes">
+<p>Pandoc traite les images contenant du texte alternatif comme une figure avec image et légende.</p>
+</aside>
+</section><section id="plusieurs-figures" class="slide level2">
+<h2>Plusieurs figures</h2>
+<div class="flex">
+<figure>
+<img data-src="img/carré.002.png" alt="" /><figcaption>Légende</figcaption>
+</figure>
+<figure>
+<img data-src="img/carré.004.png" alt="" /><figcaption>Légende</figcaption>
+</figure>
+<figure>
+<img data-src="img/carré.006.png" alt="" /><figcaption>Légende</figcaption>
+</figure>
+</div>
+<aside class="notes">
+<p>Contrairement aux images simples, Pandoc traite les figures comme des blocs. <a href="https://pandoc.org/MANUAL.html#extension-implicit_figures" class="uri">https://pandoc.org/MANUAL.html#extension-implicit_figures</a></p>
+<p>Pour juxtaposer plusieurs figures en ligne, il faut reproduire la situation des images contenues dans un paragraphe, en enveloppant les figures avec un élément <em>div</em> sur lequel on applique une classe CSS contenant les déclarations utiles : retour automatique, espacement, alignement, etc. Les détails sont une question de choix mais le standard Flexbox offre a priori exactement les outils souhaités.</p>
+</aside>
+</section><section id="légende-sur-le-côté" class="slide level2">
+<h2>Légende sur le côté</h2>
+<div class="sidecaption">
+<figure>
+<img data-src="img/paysage.001.png" alt="" /><figcaption>Une figure contient une image <em>(img)</em> et une légende <em>(figcaption)</em> positionnée dessous. Pour tirer le meilleur parti des contraintes spatiales de l’écran, on peut vouloir modifier leur disposition, par exemple en mettant la légende sur le côté quand l’image s’y prête.</figcaption>
+</figure>
+</div>
+</section><section id="section-4" class="slide level2" data-background="black">
+<h2></h2>
+<img data-src="img/EtienneJacob2018.webp" title="fig:" class="borderless stretch" alt="Art génératif via Processing, Étienne Jacob, 2018" />
+<aside class="notes">
+<p>On peut combiner les attributs de section à des attributs d’élément, ici sur une image, pour des effets visuels particulièrement prononcés. <a href="https://pandoc.org/MANUAL.html#extension-link_attributes" class="uri">https://pandoc.org/MANUAL.html#extension-link_attributes</a></p>
+<p>Source : <a href="https://necessary-disorder.tumblr.com/post/180757120663" class="uri">https://necessary-disorder.tumblr.com/post/180757120663</a></p>
+</aside>
+</section></section>
+<section><section id="crédits" class="title-slide slide level1" data-background="#E78AC3"><h1>Crédits</h1></section><section id="section-5" class="slide level2">
+<h2></h2>
+<div id="credits">
+<ul>
+<li><span>Texte et présentation</span> <span>Arthur Perret – CC BY</span></li>
+<li><span>Markdown</span> <span>John Gruber – BSD</span></li>
+<li><span>CSS</span> <span>W3C – BSD</span></li>
+<li><span>Reveal</span> <span>Hakim El Hattab – BSD</span></li>
+<li><span>Pandoc</span> <span>John McFarlane – GPL</span></li>
+<li><span>EB Garamond</span> <span>Georg Duffner, Octavio Pardo – OFL</span></li>
+<li><span>Art génératif</span> <span>Étienne Jacob</span></li>
+</ul>
+</div>
+</section></section>
+    </div>
+  </div>
+
+  <script src="/Users/aperret/Library/Mobile Documents/com~apple~CloudDocs/Recherche/Code/reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: false,
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: '/Users/aperret/Library/Mobile Documents/com~apple~CloudDocs/Recherche/Code/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '/Users/aperret/Library/Mobile Documents/com~apple~CloudDocs/Recherche/Code/reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: '/Users/aperret/Library/Mobile Documents/com~apple~CloudDocs/Recherche/Code/reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>

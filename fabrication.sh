@@ -1,0 +1,1 @@
+pandoc -f markdown prez.md -o prez.html -t revealjs -s --filter=/usr/local/bin/pandoc-citeproc --bibliography biblio.bib --csl apa-fr.csl -c prez.css -V revealjs-url=reveal.js -V history=false -V theme=white -V transition=none

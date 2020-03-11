@@ -1,0 +1,23 @@
+site_name: Présentations HTML Reveal avec Markdown et Pandoc
+site_author: Arthur Perret
+site_description: 'Un système pour fabriquer des présentations HTML Reveal.js : écriture en Markdown, le langage de balisage léger le plus simple au monde, puis conversion en HTML avec Pandoc, le couteau-suisse du texte brut.'
+copyright: '© Arthur Perret 2020 CC BY'
+nav:
+    - Accueil: index.md
+    - 1/ Composants du système: composants.md
+    - 2/ Fabrication d'une présentation: fabrication.md
+    - Crédits: credits.md
+theme:
+    name: 'material'
+    language: 'fr'
+    palette:
+        primary: 'black'
+        accent: 'light blue'
+    font: false
+#        text: '-apple-system'
+#        code: 'IBM Plex Mono'
+    logo:
+        icon: 'present_to_all'
+    favicon: 'img/favicon.ico'
+extra_css:
+    - css/custom.css

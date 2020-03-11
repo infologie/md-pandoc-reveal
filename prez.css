@@ -1,0 +1,367 @@
+/* THÈME POUR REVEAL - ARTHUR PERRET 2020
+   SOMMAIRE :
+     TYPOGRAPHIE, COULEURS, IMAGES, FIGURES,
+     IFRAMES, LISTES, CRÉDITS, BIBLIOGRAPHIE,
+     TABLEAUX, ASTÉRISMES, NUMÉRO DE SLIDE,
+     CODE, FLEX, DÉFILEMENT. */
+
+/* TYPOGRAPHIE */
+.reveal {
+	font-family: "EB Garamond", Georgia, serif;
+	font-variant-ligatures: common-ligatures;
+}
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6,
+.reveal .subtitle {
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	font-weight: 800;
+	font-style: normal;
+	text-align: left;
+	text-transform: none;
+	font-size: 1.3em;
+}
+.reveal pre,
+.reveal code,
+.reveal table,
+a.uri {
+	font-family: Inconsolata, Consolas, monospace;
+	font-variant-ligatures: none;
+	font-size: 0.7em;
+}
+span.phonetic {
+	font-family: "DejaVu Sans", sans-serif;
+}
+span.sans {
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+.reveal h1.title {
+	margin: 1em auto 0 auto;
+}
+.reveal .subtitle {
+	font-size: 1.3em;
+	margin: 0 auto 0 auto;
+}
+.reveal .subtitle::after {
+	display: block;
+	content: '❧';
+	font-size: 1.5em;
+}
+.reveal .author,
+.reveal .date {
+	margin: 0;
+}
+.center,
+h1.title,
+p.subtitle,
+p.author,
+p.date
+.reveal .title-slide h1,
+.reveal .title-slide h2,
+.reveal .title-slide h3 {
+	text-align: center;
+}
+p {
+	text-align: left;
+}
+.reveal blockquote {
+	width: 95%;
+	margin: 0;
+	font-size: 0.8em;
+	margin-left: auto;
+	font-style: normal;
+	box-shadow: none;
+	background: inherit;
+}
+.reveal blockquote p:first-child,
+.reveal blockquote p:last-child {
+    display: block;
+}
+.reveal table {
+	font-size: smaller;
+}
+.reveal table th {
+	font-weight: normal;
+}
+
+/* COULEURS */
+.reveal a {
+	color: #a00000;
+}
+.reveal .controls,
+.reveal .progress {
+	background: #999999;
+	color: #555555;
+}
+.slides section.has-dark-background h2,
+.slides section.has-dark-background h3,
+div.has-dark-background .slide-number {
+	color: #fff;
+}
+.slides section.has-dark-background h2,
+.slides section.has-dark-background h3 {
+	text-align: center;
+	font-size: 1.7em;
+}
+
+/* IMAGES */
+.reveal section img {
+	background:none;
+	border: 3px solid #fff;
+	box-shadow: 0px 0px 10px 0px #ccc;
+	padding:none;
+	margin: 0 0 0 0;
+	max-height: calc(64vh);
+    max-width: calc(64vw);
+}
+.reveal section .borderless {
+	border: none;
+	box-shadow: none;
+}
+.reveal section p > img:only-of-type {
+	margin: 0 auto;
+}
+
+/* FIGURES */
+.reveal figcaption {
+	font-size: 60%;
+	font-style: italic;
+}
+.reveal figcaption em {
+	font-style: normal;
+}
+.reveal figure {
+	margin: 0.5em 0.75em 0.5em 0.75em;
+}
+.reveal figure img {
+	max-height: calc(60vh);
+    max-width: calc(60vw);
+}
+.reveal .justify figure figcaption {
+	text-align: justify;
+}
+.sidecaption figure {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin: 0.5em 0;
+}
+.sidecaption figure figcaption {
+	text-align: left;
+	flex-shrink: 5;
+	margin: 0 0 0 1em;
+}
+
+/* IFRAMES */
+iframe {
+	border: none;
+	box-shadow: 0px 0px 5px 0px #ccc;
+	background-color: #FFFFFF;
+}
+.iframeScroll {
+	overflow: scroll;
+}
+
+/* LISTES */
+.reveal ul, .reveal ol {
+	margin: 0 0 0 0;
+}
+dd {
+	padding-bottom: 0.5em;
+}
+.reveal ul {
+    list-style-type: '— ';
+}
+
+/* CRÉDITS */
+#credits ul {
+	display: inline;
+	font-size: 0.8em;
+    max-width: 40em;
+    padding: 0;
+    list-style: none
+}
+#credits ul li {
+	overflow-x: hidden;
+}
+#credits ul li:before {
+    float: left;
+    width: 0;
+    white-space: nowrap;
+    content:
+ ". . . . . . . . . . . . . . . . . . . . "
+ ". . . . . . . . . . . . . . . . . . . . "
+ ". . . . . . . . . . . . . . . . . . . . "
+ ". . . . . . . . . . . . . . . . . . . . "
+}
+#credits ul span:first-child {
+    padding-right: 0.33em;
+	background: white;
+}
+#credits ul span + span {
+    float: right;
+    padding-left: 0.33em;
+    background: white;
+}
+
+/* BIBLIOGRAPHIE */
+#refs p {
+	font-size: 0.5em;
+	text-indent: -3em;
+	padding-left: 3em;
+}
+#refs {
+	max-height: 7em;
+	overflow: scroll;
+	scrollbar-width: none;
+}
+#refs::-webkit-scrollbar { 
+	display: none;
+}
+
+/* TABLEAUX */
+.reveal table {
+    width: auto;
+    border-spacing: 0px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.reveal thead {
+    border-bottom: 2px solid black;	
+}
+.reveal table th,
+.reveal table td {
+	border-bottom: none;
+}
+.reveal table caption {
+	font-size: 75%;
+	font-style: normal;
+	font-weight: bold;
+	padding: 0.2em 0.5em 0.2em 0.5em;
+}
+.reveal table caption em {
+	font-style: normal;
+}
+
+/* ASTÉRISMES */
+hr {
+    background: none;
+    border: 0;
+    margin: 0.5em 0 0 0;
+    padding: 0;
+}
+hr::after {
+    content: '⁂';
+    display: block;
+    opacity: 1;
+    line-height: 1;
+    text-align: center;
+    font-family: "EB Garamond", Georgia, serif;
+    color: #131313;
+    font-size: 0.5em;
+}
+
+/* NUMÉRO DE SLIDE (si activé) */
+.reveal .slide-number {
+	position: absolute;
+	display: block;
+	right: 1em;
+	bottom: 0.6em;
+	z-index: 31;
+	font-family: "EB Garamond", Georgia, serif;
+	font-variant-numeric: oldstyle-nums;
+	font-size: 0.5em;
+	color: currentColor;
+	background-color: rgba(0, 0, 0, 0);
+}
+.reveal .slide-number a {
+	color: currentColor;
+}
+
+/* CODE */
+div.sourceCode {
+	margin: 10px;
+}
+.reveal pre,
+a.uri {
+	width: 98%;
+	margin: 0;
+	box-shadow: none;
+	background-color: rgba(220,220,220,.5);
+	border-radius: 2px;
+	box-decoration-break: clone;
+	color: inherit;
+	padding: 0 2px;
+}
+.reveal pre code {
+	max-height: 500px;
+}
+h1 > code,
+h2 > code,
+h3 > code,
+p > code,
+li > code {
+	background-color: rgba(220,220,220,.5);
+	border-radius: 2px;
+	box-decoration-break: clone;
+	padding: 0 2px;
+	word-wrap: break-word;
+}
+pre.numberSource code > span > a:first-child::before {
+    left: 0.2em;
+    padding: 0 15px;
+}
+code.sourceCode > span > a:first-child::before {
+    text-decoration: none;
+}
+
+kbd {
+	background-color: #eee;
+	border-radius: 3px;
+	border: 1px solid #b4b4b4;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .2), 0 2px 0 0 rgba(255, 255, 255, .7) inset;
+	color: #333;
+	display: inline-block;
+	font-family: "Courier New", "Monaco", mono;
+	font-size: .85em;
+	font-weight: 700;
+	line-height: 1;
+	padding: 2px 4px;
+	white-space: nowrap;
+}
+
+/* FLEX */
+.reveal .flex {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.reveal .flex .* {
+	align-self: center;
+}
+.reveal .flex p {
+	margin: 0 5px;
+}
+.reveal .flex figure {
+	margin: 0 0.5em;
+	max-height: calc(64vh);
+    max-width: calc(64vw);
+}
+.reveal .flex figure img {
+	max-height: calc(60vh);
+    max-width: calc(60vw);
+}
+
+/* DÉFILEMENT */
+.long {
+    overflow-y: auto  !important;
+    overflow-x: visible !important;
+    height: 75vh;
+}
+.long ul {
+	padding-left: 50px;
+}
