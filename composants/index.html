@@ -503,6 +503,7 @@
 <p>Dans la commande ci-dessus : l'ordre des différentes options n'a pas d'importance et la séparation en lignes distinctes est faite uniquement par commodité visuelle. Première ligne : fichiers en entrée et en sortie. Deuxième ligne : concerne les références bibliographiques, s'il y en a. Troisième ligne : options de Reveal.</p>
 <p>La liste complète des options est ici : <a href="https://github.com/hakimel/reveal.js#configuration">https://github.com/hakimel/reveal.js#configuration</a>. <code>history=false</code> évite de peupler l'historique du navigateur avec chaque passage de slide. <code>transition=none</code> économise du temps et de l'énergie.</p>
 <p>Les thèmes prédéfinis sont globalement assez vilains. Le thème <em>white</em> (noir sur fond blanc) fournit une meilleure base pour personnaliser que le thème par défaut. Certains recommandent de tout jeter et repartir de zéro, cf. <a href="https://www.chenhuijing.com/blog/customising-revealjs-beyond-theming/">https://www.chenhuijing.com/blog/customising-revealjs-beyond-theming/</a></p>
+<p>Pour indiquer à Pandoc où se trouve Reveal, il faut inclure l'option <code>revealjs-url</code> dans la commande. Cette URL peut pointer vers une version en ligne ou bien une copie locale sur votre machine.</p>
 <h2 id="assemblage-du-systeme">Assemblage du système</h2>
 <p>Plutôt qu'exécuter Pandoc manuellement, mieux vaut écrire un script ou utiliser un logiciel. Exemple (macOS) :</p>
 <ul>
