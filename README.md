@@ -13,4 +13,3 @@ Le fichier `prez.md` est auto-démonstratif : il explique l'intérêt du systèm
 - `img` : images utilisées dans la présentation (regroupement facultatif mais pratique)
 - `prez.css` : styles appliqués à la présentation
 - `prez.md` : fichier source
-- `reveal.js` : dossier contenant la librairie Reveal
