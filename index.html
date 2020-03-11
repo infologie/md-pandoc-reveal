@@ -10,8 +10,10 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="Un système pour fabriquer des présentations HTML Reveal.js : écriture en Markdown, le langage de balisage léger le plus simple au monde, puis conversion en HTML avec Pandoc, le couteau-suisse du texte brut.">
+        <meta name="description" content="Tutoriel pour fabriquer des présentations HTML Reveal.js : écriture en Markdown, un langage de balisage léger très simple, puis conversion en HTML avec Pandoc, le couteau-suisse du texte brut.">
       
+      
+        <link rel="canonical" href="https://infologie.github.io/md-pandoc-reveal/">
       
       
         <meta name="author" content="Arthur Perret">
@@ -79,22 +81,20 @@
       <defs>
         
         
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
       </defs>
     </svg>
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#introduction" tabindex="0" class="md-skip">
-        Skip to content
-      </a>
-    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="." title="Présentations HTML Reveal avec Markdown et Pandoc" aria-label="Présentations HTML Reveal avec Markdown et Pandoc" class="md-header-nav__button md-logo">
+        <a href="https://infologie.github.io/md-pandoc-reveal/" title="Présentations HTML Reveal avec Markdown et Pandoc" aria-label="Présentations HTML Reveal avec Markdown et Pandoc" class="md-header-nav__button md-logo">
           
             <i class="md-icon">present_to_all</i>
           
@@ -146,6 +146,28 @@
         
       </div>
       
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/infologie/md-pandoc-reveal" title="Aller au dépôt" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    infologie/md-pandoc-reveal
+  </div>
+</a>
+          </div>
+        </div>
+      
     </div>
   </nav>
 </header>
@@ -164,13 +186,33 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="." title="Présentations HTML Reveal avec Markdown et Pandoc" class="md-nav__button md-logo">
+    <a href="https://infologie.github.io/md-pandoc-reveal/" title="Présentations HTML Reveal avec Markdown et Pandoc" class="md-nav__button md-logo">
       
         <i class="md-icon">present_to_all</i>
       
     </a>
     Présentations HTML Reveal avec Markdown et Pandoc
   </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/infologie/md-pandoc-reveal" title="Aller au dépôt" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    infologie/md-pandoc-reveal
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -185,56 +227,11 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Accueil
-      </label>
     
     <a href="." title="Accueil" class="md-nav__link md-nav__link--active">
       Accueil
     </a>
     
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table des matières</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#deux-points-de-vigilance" class="md-nav__link">
-    Deux points de vigilance
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#desiderata" class="md-nav__link">
-    Desiderata
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#solution-proposee" class="md-nav__link">
-    Solution proposée
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -244,8 +241,8 @@
 
 
   <li class="md-nav__item">
-    <a href="composants/" title="1/ Composants du système" class="md-nav__link">
-      1/ Composants du système
+    <a href="introduction/" title="1/ Pourquoi ce système ?" class="md-nav__link">
+      1/ Pourquoi ce système ?
     </a>
   </li>
 
@@ -256,8 +253,20 @@
 
 
   <li class="md-nav__item">
-    <a href="fabrication/" title="2/ Fabrication d'une présentation" class="md-nav__link">
-      2/ Fabrication d'une présentation
+    <a href="composants/" title="2/ Composants du système" class="md-nav__link">
+      2/ Composants du système
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="fabrication/" title="3/ Fabrication d'une présentation" class="md-nav__link">
+      3/ Fabrication d'une présentation
     </a>
   </li>
 
@@ -281,84 +290,16 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table des matières</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#deux-points-de-vigilance" class="md-nav__link">
-    Deux points de vigilance
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#desiderata" class="md-nav__link">
-    Desiderata
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#solution-proposee" class="md-nav__link">
-    Solution proposée
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                <h1 id="introduction">Introduction</h1>
-<p>Une présentation scientifique doit se penser en termes de raison graphique, à contre-courant de la culture présentationnelle dominante façonnée par PowerPoint. Ne pas le faire, c'est saboter sa propre énonciation.</p>
-<ul>
-<li>Tufte, E. R. (2003). <em>The Cognitive Style of PowerPoint: Pitching Out Corrupts Within.</em> Cheshire : Graphics Press.</li>
-<li>Frommer, F. (2010). <em>La pensée Powerpoint : enquête sur ce logiciel qui rend stupide.</em> Paris : La Découverte.</li>
-<li>Robles-Anderson, E., &amp; Svensson, P. (2016). « One Damn Slide After Another »: PowerPoint at Every Occasion for Speech. <em>Computational Culture</em>, (5). <a href="http://computationalculture.net/one-damn-slide-after-another-powerpoint-at-every-occasion-for-speech/">http://computationalculture.net/one-damn-slide-after-another-powerpoint-at-every-occasion-for-speech/</a></li>
-</ul>
-<p>À ces trois références, on peut ajouter les nombreux travaux de l'équipe d'Yves Jeanneret et Emmanuël Souchier, avec les concepts d'architexte, de plastigramme, etc.</p>
-<h2 id="deux-points-de-vigilance">Deux points de vigilance</h2>
-<p>La liste à puces est souvent une béquille creuse qui tend à effacer les liens entre les étapes d'un raisonnement.</p>
-<p>Pour représenter efficacement de l'information, il faut acquérir des notions de composition, d'édition, de design (hiérarchie, blanc, densité, résolution, etc.) sous peine de contre-productivité fatale (« <em>Death by PowerPoint</em> »).</p>
-<p>C'est là que la courbe d'apprentissage est la plus pentue, et le bénéfice intellectuel le plus grand.</p>
-<h2 id="desiderata"><em>Desiderata</em></h2>
-<ul>
-<li><strong>Pérennité</strong> : travailler avec un format léger, ouvert, facile à lire et à écrire.</li>
-<li><strong>Efficacité</strong> : automatiser, éditer précisément, reproduire rapidement et sûrement.</li>
-<li><strong>Fonctionnalité</strong> : bénéficier des innovations du web – mise en page adaptative, défilement, transclusion, etc.</li>
-<li><strong>Liberté</strong> : accroître son agilité informatique, choisir ses dépendances logicielles en toute conscience.</li>
-</ul>
-<p>La suite Office (Word, Excel, PowerPoint) et la suite Google (Docs, Sheets, Slides) ne nous apprennent strictement rien sur la fabrique du Web. Ce qu’on peut réaliser avec quelques lignes de texte brut me paraît bien plus intéressant dans une perspective de culture numérique. Les compétences de mise en page qu’on apprend pour styler une présentation en Reveal.js, par exemple, sont transférables à toute autre projet qui utilise les technologies du Web – notamment l'édition.</p>
-<h2 id="solution-proposee">Solution proposée</h2>
-<ul>
-<li>Écriture en Markdown (avec les ajouts de Pandoc).</li>
-<li>Mise en forme via CSS.</li>
-<li>Conversion en HTML (avec Reveal.js) via Pandoc.</li>
-</ul>
-<p>Pourquoi Markdown avec Pandoc, et pas Asciidoc avec Asciidoctor ? C'est une question de complexité : la sémantique d'Asciidoc (héritée de DocBook XML) et l'univers logiciel d'Asciidoctor (Ruby, NodeJS) sont trop lourds pour mes besoins. Je pense que ces outils parlent plus facilement aux développeurs, aux ingénieurs, ainsi qu'aux documentalistes techniques.</p>
+                  <h1>Accueil</h1>
+                
+                <p>Voici un tutoriel pour fabriquer des présentations HTML <a href="https://github.com/hakimel/reveal.js/">Reveal.js</a> : écriture en Markdown, un langage de balisage léger très simple, puis conversion en HTML avec <a href="https://github.com/jgm/pandoc/">Pandoc</a>, le couteau-suisse du texte brut.</p>
+<p>Un dépôt contenant un exemple auto-démonstratif (et les fichiers nécessaires pour le reproduire) est disponible à l'adresse <a href="https://github.com/infologie/md-pandoc-reveal">https://github.com/infologie/md-pandoc-reveal</a>. Le contenu de l'exemple est identique au contenu de ce site.</p>
                 
                   
                 
@@ -381,13 +322,13 @@
       <nav class="md-footer-nav__inner md-grid">
         
         
-          <a href="composants/" title="1/ Composants du système" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="introduction/" title="1/ Pourquoi ce système ?" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Suivant
                 </span>
-                1/ Composants du système
+                1/ Pourquoi ce système ?
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -413,6 +354,13 @@
           Material for MkDocs</a>
       </div>
       
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.css">
+    
+      <a href="https://twitter.com/arthurperret" target="_blank" rel="noopener" title="twitter" class="md-footer-social__link fa fa-twitter"></a>
+    
+  </div>
+
     </div>
   </div>
 </footer>

@@ -10,8 +10,10 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="Un système pour fabriquer des présentations HTML Reveal.js : écriture en Markdown, le langage de balisage léger le plus simple au monde, puis conversion en HTML avec Pandoc, le couteau-suisse du texte brut.">
+        <meta name="description" content="Tutoriel pour fabriquer des présentations HTML Reveal.js : écriture en Markdown, un langage de balisage léger très simple, puis conversion en HTML avec Pandoc, le couteau-suisse du texte brut.">
       
+      
+        <link rel="canonical" href="https://infologie.github.io/md-pandoc-reveal/fabrication/">
       
       
         <meta name="author" content="Arthur Perret">
@@ -40,7 +42,7 @@
     
     
       
-        <title>2/ Fabrication d'une présentation - Présentations HTML Reveal avec Markdown et Pandoc</title>
+        <title>3/ Fabrication d'une présentation - Présentations HTML Reveal avec Markdown et Pandoc</title>
       
     
     
@@ -79,6 +81,8 @@
       <defs>
         
         
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
       </defs>
     </svg>
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -94,7 +98,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href=".." title="Présentations HTML Reveal avec Markdown et Pandoc" aria-label="Présentations HTML Reveal avec Markdown et Pandoc" class="md-header-nav__button md-logo">
+        <a href="https://infologie.github.io/md-pandoc-reveal/" title="Présentations HTML Reveal avec Markdown et Pandoc" aria-label="Présentations HTML Reveal avec Markdown et Pandoc" class="md-header-nav__button md-logo">
           
             <i class="md-icon">present_to_all</i>
           
@@ -111,7 +115,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                2/ Fabrication d'une présentation
+                3/ Fabrication d'une présentation
               
             </span>
           
@@ -146,6 +150,28 @@
         
       </div>
       
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/infologie/md-pandoc-reveal" title="Aller au dépôt" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    infologie/md-pandoc-reveal
+  </div>
+</a>
+          </div>
+        </div>
+      
     </div>
   </nav>
 </header>
@@ -164,13 +190,33 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href=".." title="Présentations HTML Reveal avec Markdown et Pandoc" class="md-nav__button md-logo">
+    <a href="https://infologie.github.io/md-pandoc-reveal/" title="Présentations HTML Reveal avec Markdown et Pandoc" class="md-nav__button md-logo">
       
         <i class="md-icon">present_to_all</i>
       
     </a>
     Présentations HTML Reveal avec Markdown et Pandoc
   </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/infologie/md-pandoc-reveal" title="Aller au dépôt" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    infologie/md-pandoc-reveal
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -192,8 +238,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../composants/" title="1/ Composants du système" class="md-nav__link">
-      1/ Composants du système
+    <a href="../introduction/" title="1/ Pourquoi ce système ?" class="md-nav__link">
+      1/ Pourquoi ce système ?
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../composants/" title="2/ Composants du système" class="md-nav__link">
+      2/ Composants du système
     </a>
   </li>
 
@@ -213,11 +271,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        2/ Fabrication d'une présentation
+        3/ Fabrication d'une présentation
       </label>
     
-    <a href="./" title="2/ Fabrication d'une présentation" class="md-nav__link md-nav__link--active">
-      2/ Fabrication d'une présentation
+    <a href="./" title="3/ Fabrication d'une présentation" class="md-nav__link md-nav__link--active">
+      3/ Fabrication d'une présentation
     </a>
     
       
@@ -317,6 +375,13 @@
         <li class="md-nav__item">
   <a href="#legende-sur-le-cote" class="md-nav__link">
     Légende sur le côté
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combinaisons" class="md-nav__link">
+    Combinaisons
   </a>
   
 </li>
@@ -455,6 +520,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#combinaisons" class="md-nav__link">
+    Combinaisons
+  </a>
+  
+</li>
+      
       
       
       
@@ -510,41 +582,55 @@ Contenu (texte, image, etc.)
 <p>Grâce aux attributs rajoutés à Markdown par Pandoc, on peut même aller un cran plus loin. CSS permet d'afficher ou masquer des éléments grâce à la propriété <code>display</code>, ce qui signifie qu'on peut rédiger le fichier source de manière à masquer une partie du contenu côté présentation (blocs entiers via <em>divs</em> et fragments intra-blocs via <em>spans</em>) et générer d'autre part un PDF qui affiche tout.</p>
 <p>Il faut que le contenu s'y prête et cela nécessite de la gymnastique. Dans une certaine mesure, il s'agit d'emprunter une certaine conception lettrée de la programmation (<em>literate programming</em>, Donald Knuth) et de l'appliquer à Pandoc : ce dernier étant capable de tisser (<em>weave</em>) différents documents à partir d'un même fichier, on peut jouer sur les différences entre formats pour mettre en œuvre un processus d'édition multicanal.</p>
 <h2 id="recommandations-sur-les-images">Recommandations sur les images</h2>
-<p><img alt="" src="../img/paysage.005.png" /></p>
+<pre><code>![](img/paysage.005.png)
+</code></pre>
+
 <p>Résolution élevée, grande taille et zoom <kbd>Alt</kbd>+<kbd>clic</kbd></p>
 <p>Un bon début consiste à définir les dimensions maximales d'affichage des images proportionnellement à la taille de l'écran. C'est plus facile à dire qu'à faire. Il faut par exemple considérer qu'une image dans une figure devrait être moins grande qu'une image standard, pour accommoder la légende positionnée dessous.</p>
 <h2 id="juxtaposition-horizontale">Juxtaposition horizontale</h2>
-<p><img alt="" src="../img/paysage.002.png" /></p>
-<p><img alt="" src="../img/paysage.004.png" /></p>
+<pre><code>![](img/paysage.002.png)
+
+![](img/paysage.004.png)
+</code></pre>
+
 <p>La comparaison est un bon outil analytique. Il est facile de juxtaposer des images si elles sont au format paysage et de ratio équivalent : on les inclut normalement, séparées par deux retours à la ligne.</p>
 <p>Par défaut, Reveal ne propose pas de solution pour afficher du contenu qui dépasserait la hauteur de la slide. Quelques lignes de CSS suffisent toutefois à créer une classe qui vient ajouter du défilement en cas de besoin (ici la classe <em>long</em>).</p>
 <h2 id="juxtaposition-verticale">Juxtaposition verticale</h2>
-<p><img alt="" src="../img/portrait.001.png" />
-<img alt="" src="../img/portrait.003.png" /></p>
+<pre><code>![](img/portrait.001.png)
+![](img/portrait.003.png)
+</code></pre>
+
 <p>Pour juxtaposer deux images au format portrait, il faut juste les séparer par un retour à la ligne. En Markdown, il faut deux retours à la ligne pour séparer deux paragraphes. En séparant des images par un seul retour à la ligne, elles appartiennent au même paragraphe et sont donc positionnées sur une même ligne.</p>
 <p>Assembler deux images et afficher le résultat en image de fond constitue une bonne option pour occuper exactement l'espace maximum disponible, si on n'a pas besoin de légende et si on maîtrise la résolution d'affichage.</p>
 <h2 id="alignement-dimages">Alignement d'images</h2>
-<p><img alt="" src="../img/carre.001.png" />
-<img alt="" src="../img/carre.002.png" />
-<img alt="" src="../img/carre.003.png" />
-<img alt="" src="../img/carre.004.png" />
-<img alt="" src="../img/carre.005.png" />
-<img alt="" src="../img/carre.006.png" /></p>
+<pre><code>![](img/carre.001.png)
+![](img/carre.002.png)
+![](img/carre.003.png)
+![](img/carre.004.png)
+![](img/carre.005.png)
+![](img/carre.006.png)
+</code></pre>
+
 <p>Un retour à la ligne automatique (<em>wrap</em>) intervient lorsque les images mises bout à bout excèdent la largeur de l'écran.</p>
 <h2 id="figures">Figures</h2>
-<p><img alt="Légende" src="../img/portrait.003.png" /></p>
+<pre><code>![Légende](img/portrait.003.png)
+</code></pre>
+
 <p>Pandoc traite les images contenant du texte alternatif comme une figure avec image et légende.</p>
 <h2 id="plusieurs-figures">Plusieurs figures</h2>
-<p><img alt="Légende" src="../img/carre.002.png" /></p>
-<p><img alt="Légende" src="../img/carre.004.png" /></p>
-<p><img alt="Légende" src="../img/carre.006.png" /></p>
+<pre><code>![Légende](img/carre.002.png)
+
+![Légende](img/carre.004.png)
+
+![Légende](img/carre.006.png)
+</code></pre>
+
 <p>Contrairement aux images simples, Pandoc traite les figures comme des blocs. <a href="https://pandoc.org/MANUAL.html#extension-implicit_figures">https://pandoc.org/MANUAL.html#extension-implicit_figures</a></p>
 <p>Pour juxtaposer plusieurs figures en ligne, il faut reproduire la situation des images contenues dans un paragraphe, en enveloppant les figures avec un élément <em>div</em> sur lequel on applique une classe CSS contenant les déclarations utiles : retour automatique, espacement, alignement, etc. Les détails sont une question de choix mais le standard Flexbox offre a priori exactement les outils souhaités.</p>
 <h2 id="legende-sur-le-cote">Légende sur le côté</h2>
-<p><img alt="Une figure contient une image *(img)* et une légende *(figcaption)* positionnée dessous. Pour tirer le meilleur parti des contraintes spatiales de l'écran, on peut vouloir modifier leur disposition, par exemple en mettant la légende sur le côté quand l'image s'y prête." src="../img/paysage.001.png" /></p>
-<p><img alt="Art génératif via Processing, Étienne Jacob, 2018" src="../img/EtienneJacob2018.webp" /></p>
-<p>On peut combiner les attributs de section à des attributs d'élément, ici sur une image, pour des effets visuels particulièrement prononcés. <a href="https://pandoc.org/MANUAL.html#extension-link_attributes">https://pandoc.org/MANUAL.html#extension-link_attributes</a></p>
-<p>Source : <a href="https://necessary-disorder.tumblr.com/post/180757120663">https://necessary-disorder.tumblr.com/post/180757120663</a></p>
+<p>Une figure contient une image <em>(img)</em> et une légende <em>(figcaption)</em> positionnée dessous. Pour tirer le meilleur parti des contraintes spatiales de l'écran, on peut vouloir modifier leur disposition, par exemple en mettant la légende sur le côté quand l'image s'y prête.</p>
+<h2 id="combinaisons">Combinaisons</h2>
+<p>On peut combiner les attributs de section à des attributs d'élément pour des effets visuels particulièrement prononcés. <a href="https://pandoc.org/MANUAL.html#extension-link_attributes">https://pandoc.org/MANUAL.html#extension-link_attributes</a></p>
                 
                   
                 
@@ -566,7 +652,7 @@ Contenu (texte, image, etc.)
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../composants/" title="1/ Composants du système" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../composants/" title="2/ Composants du système" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -575,7 +661,7 @@ Contenu (texte, image, etc.)
                 <span class="md-footer-nav__direction">
                   Précédent
                 </span>
-                1/ Composants du système
+                2/ Composants du système
               </span>
             </div>
           </a>
@@ -613,6 +699,13 @@ Contenu (texte, image, etc.)
           Material for MkDocs</a>
       </div>
       
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="https://twitter.com/arthurperret" target="_blank" rel="noopener" title="twitter" class="md-footer-social__link fa fa-twitter"></a>
+    
+  </div>
+
     </div>
   </div>
 </footer>
