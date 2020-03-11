@@ -3,6 +3,7 @@
 Une présentation scientifique doit se penser en termes de raison graphique, à contre-courant de la culture présentationnelle dominante façonnée par PowerPoint. Ne pas le faire, c'est saboter sa propre énonciation.
 
 - Tufte, E. R. (2003). *The Cognitive Style of PowerPoint: Pitching Out Corrupts Within.* Cheshire : Graphics Press.
+- Haladjian, R. (2003). *Devenez beau, riche et intelligent, avec PowerPoint, Excel et Word.* Paris : Éditions d’Organisation. <http://pauillac.inria.fr/~weis/info/haladjian.pdf> (merci à Henri Sergent)
 - Frommer, F. (2010). *La pensée Powerpoint : enquête sur ce logiciel qui rend stupide.* Paris : La Découverte.
 - Robles-Anderson, E., & Svensson, P. (2016). « One Damn Slide After Another »: PowerPoint at Every Occasion for Speech. *Computational Culture*, (5). <http://computationalculture.net/one-damn-slide-after-another-powerpoint-at-every-occasion-for-speech/>
 
